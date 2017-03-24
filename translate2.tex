@@ -1,0 +1,797 @@
+\documentclass[cs4size, a4paper, 12pt]{article}
+\usepackage{hyperref}
+\usepackage{tocvsec2}
+\hypersetup{colorlinks,
+	linkcolor=red,
+	filecolor=blue,
+	urlcolor=blue,
+	citecolor=green,
+	CJKbookmarks=True,
+	pdftitle={研究生英语综合教程1--10单元原文及翻译},
+	pdfauthor={Tsingber Lee},
+	pdfsubject={TiKZ/pgf},
+	pdfkeywords={研究生, LaTeX, 英语, 综合教程, 翻译},
+	pdfproducer={Typset by XeLaTeX} } 
+\usepackage{geometry}
+\geometry{paperwidth=22.275cm, left=1.5cm, right=4cm, top=2cm, bottom=2cm}
+\usepackage{mathpazo}
+\usepackage{bm}
+\usepackage{tikz}
+\usepackage[space, UTF8, fontset = none]{ctex}
+\xeCJKsetup{
+	AutoFakeSlant = true
+}
+\xeCJKsetslantfactor{0.17}
+\linespread{1.667}
+% 字体设置
+\ctexset{fontset = none}
+% set up fonts
+\setCJKmainfont[BoldFont={Adobe Heiti Std}]{Adobe Song Std}
+\setCJKsansfont{Adobe Heiti Std}
+\setCJKmonofont{SimHei}
+\setmainfont{Adobe Garamond Pro}
+\setsansfont{Arial}
+\setmonofont{Courier New}
+
+\definecolor{tcolor}{RGB}{255,127,0} % default: 0, 124, 53
+\definecolor{lcolor}{RGB}{255,178,102} % default: 153, 255, 153
+\definecolor{pcolor}{RGB}{251,204,231} % default: 216, 255, 216
+
+\newcommand{\elegantpar}[2]{%
+	\textcolor{tcolor}{$\bm\langle{}\!{}$#1${}\!{}\bm\rangle$}%
+	\begin{tikzpicture}[remember picture, baseline=-0.75ex]%
+	\node[coordinate] (inText) {};%
+	\end{tikzpicture}%
+	\marginpar{%
+		\renewcommand{\baselinestretch}{1.0}%
+		\begin{tikzpicture}[remember picture]%
+		\draw node[fill= pcolor, rounded corners, text width=\marginparwidth] (inNote){\zihao{-4}#2};%
+		\end{tikzpicture}%
+	}%
+	\begin{tikzpicture}[remember picture, overlay]%
+	\draw[draw = lcolor, thick]
+	([yshift=-0.55em] inText)
+	-| ([xshift=-0.55em] inNote.west)
+	-| (inNote.west);%
+	\end{tikzpicture}%
+}
+
+\setlength{\marginparwidth}{2.8cm}
+\usepackage{titlesec}
+\usepackage{chngcntr}
+\usepackage{lipsum} % for dummy text
+\titleclass{\numpar}{straight}[\subsection]
+\newcounter{numpar}
+\renewcommand{\thenumpar}{\arabic{numpar}}
+\counterwithout{numpar}{subsection} % from the chngcntr package
+\titleformat{name=\numpar, page=odd}[leftmargin] {\normalfont
+	\bfseries\filright}
+{\textcolor{tcolor}{\thenumpar}}{.5em}{}
+\titleformat{name=\numpar, page=even}[leftmargin] {\normalfont
+	\bfseries\filleft}
+{\thenumpar}{.5em}{}
+\titlespacing{\numpar}
+{1pc}{0ex plus .1ex minus .2ex}{1pc}
+\newcommand*{\newpar}{\numpar{}}
+
+\title{研究生英语综合教程1--10单元原文及翻译\includegraphics[width=1em]{CREATINGCUSTOM-NOTE-TYPESIN-ANKI1.png}}
+\author{\huge Tsingber Lee}
+\begin{document}
+	\maketitle
+	
+	%chapter,section,subsection等等
+	\zihao{-3}
+	
+	\section{The Hidden Side of Happiness}
+	
+	\newpar Hurricanes, house fires, cancer, whitewater rafting accidents, plane crashes, vicious attacks in dark \elegantpar{alleyways}{巷, 衖; 窄道, 小过道}. Nobody asks for any of it. But to their surprise, many people find that enduring such a harrowing ordeal ultimately changes them for the better. Their \elegantpar{refrain}{一再重复的话;<喻>老调} might go something like this: ``I wish it hadn't happened, but I'm a better person for it.''
+	
+	飓风、房屋失火、癌症、激流漂筏失事、坠机、昏暗小巷遭歹徒袭击，没人想找上这些事儿。 但出人意料的是，很多人发现遭受这样一次痛苦的磨难最终会使他们向好的方面转变。 他们可能都会这样说:``我希望这事没发生，但因为它我变得更完美了。 ''
+	
+	\newpar We love to hear the stories of people who have been transformed by their \elegantpar{tribulations}{a state of great trouble or suffering
+		苦难, 艰难, 磨难：}, perhaps because they testify to a \elegantpar{bona fide}{genuine; real
+		真实的; 真正的} type of psychological truth, one that sometimes gets lost amid\footnote{surrounded by; in the middle of
+		在
+		之中} endless reports of disaster: There seems to be a \elegantpar{built-in}{(of a characteristic) inherent; innate
+		（特性）固有的, 与生俱来的} human capacity to flourish under the most difficult circumstances. Positive responses to profoundly disturbing experiences are not limited to the toughest\footnote{(of a person or animal) able to endure hardship or pain; physically robust
+		（人, 动物）能吃苦耐劳的; 强壮的} or the bravest. In fact, \elegantpar{roughly}{approximately
+		粗略地; 大体上, 大约} half the people who struggle with adversity say that their lives \elegantpar{subsequently}{coming after something in time; following
+		随后的; 紧接的} in some ways improved.
+	
+	我们都爱听人们经历苦难后发生转变的故事，可能是因为这些故事证实了一条真正的心理学上的真理，这条真理有时会湮没在无数关于灾难的报道中:在最困难的境况中，人所具有的一种内在的奋发向上的能力会进发出来。 对那些令人极度恐慌的经历作出?积极回应的并不仅限于最坚强或最勇敢的人。 实际上，大约半数与逆境抗争过的人都说他们的生活从此在某些方面有了改善。 
+	
+	\newpar This and other promising findings about the life-changing effects of crises are the province of the new science of post-traumatic growth. This fledgling field has already proved the truth of what once passed as \elegantpar{bromide}{a trite and unoriginal idea or remark, especially one intended to soothe or placate
+		陈腐庸俗的想法（或话）}: What doesn't kill you can actually make you stronger. Post-traumatic stress is far from the only possible outcome. In the wake of even the most terrifying experiences, only a small proportion of adults become chronically troubled. More commonly, people \elegantpar{rebound}{a quick recovery form or reaction to disappointment or depression. 振作，反应；从失望或衰败中迅速的恢复或迅速作出的反应} or even eventually thrive.
+	
+	诸如此类有关危机改变一生的发现有着可观的研究前景，这正是创伤后成长这一新学科的研究领域。 这一新兴领域已经证实了曾经被视为陈词滥调的一个真理:大难不死，意志弥坚。 创伤后压力绝不是唯一可能的结果。 在遭遇了即使最可怕的经历之后，也只有一小部分成年人会受到长期的心理折磨。 更常见的情况是，人们会恢复过来—甚至最终会成功发达。  
+	
+	\newpar Those who \underline{weather} adversity \underline{well} are living proof of the paradoxes of happiness. We need more than pleasure to live the best possible life. Our contemporary quest for happiness has \elegantpar{shriveled to}{When something shrivels, it becomes dryer and smaller, often with lines in its surface, as a result of losing the water it contains. } a hunt for bliss a life protected from bad feelings, free from pain and confusion. 
+	
+	那些\underline{经受住}苦难打击的人是有关幸福悖论的生动例证: 为了尽可能地过上最好的生活，我们所需要的不仅仅是愉悦的感受。 我们这个时代的人对幸福的追求已经缩小到只追求福气: 一生没有烦恼，没有痛苦和困惑。 
+	
+	\newpar This \underline{anodyne}\footnote{not likely to cause offence or disagreement and somewhat dull 不得罪人的; 有点乏味的} definition of well-being \elegantpar{leaves out}{neglect to put in 遗漏} the better half of the story, the rich, full joy that comes from a meaningful life. It is the dark matter of happiness, the \elegantpar{ineffable}{too great or extreme to be expressed or described in words
+		（伟大或极致得）无法表达的, 不可言喻的, 难以形容的} quality we admire in wise men and women and aspire to cultivate in our own lives. It turns out that some of the people who have suffered the most, who have been forced to contend with shocks they never anticipated and to rethink the meaning of their lives, may have the most to tell us about that profound and intensely fulfilling journey that philosophers used to call the search for ``the good life''.
+	
+	这种对幸福的\underline{平淡}定义忽略了问题的主要方面—种富有意义的生活所带来的那种丰富、完整的愉悦。 那就是幸福背后隐藏的那种本质—是我们在明智的男男女女身上所欣赏到并渴望在我们自己生活中培育的那种不可言喻的品质。 事实证明，一些遭受苦难最多的人-他们被迫全力应付他们未曾预料到的打击，并重新思考他们生活的意义—或许对那种深刻的、给人以强烈满足感的人生经历(哲学家们过去称之为对 ``美好生活'' 的探寻)最有发言权。  
+	
+	\newpar This broader definition of good living blends deep satisfaction and a profound connection to others through empathy. It is dominated by happy feelings but \underline{seasoned} also \underline{with} nostalgia and regret. ``Happiness is only one among many values in human life,'' contends Laura King, a psychologist at the University of Missouri in Columbia. Compassion, wisdom, altruism, insight, creativity-sometimes only the trials of adversity can foster these qualities, because sometimes only drastic situations can force us to take on the painful process of change. To live a full human life, a \underline{tranquil}, carefree existence is not enough. We also need to grow and sometimes growing hurts.
+	
+	这种对美好生活的更为广泛的定义把深深的满足感和一种通过移情与他人建立的深切联系融合在一起。 它主要受愉悦情感的支配，但同时也\underline{夹杂着}惆怅和悔恨。 密苏里大学哥伦比亚分校的心理学家劳拉?金认为: ``幸福仅仅是许许多多人生价值中的一种。 '' 慈悲、智慧、无私、 洞察力及创造力—有时只有经历逆境的考验才能培育这些品质，因为有时只有极端的情形才能迫使我们去承受痛苦的改变过程。 只过\underline{安宁的}、无忧无虑的生活是不足以体验一段完整的人生的。 (此文来自袁勇兵博客)我们也需要成长-尽管有时成长是痛苦的。 
+	
+	\newpar In a dark room in Queens, New York, 31-year-old fashion designer Tracy Cyr \underline{believed she was dying}. A few months before, she had stopped taking the \underline{powerful immune-suppressing drugs} that kept her arthritis in check. She never anticipated what would happen: a \elegantpar{withdrawal}{the action of withdrawing something 撤消; 撤回; 撤退; 收回} reactions that eventually left her in total body agony and neurological \elegantpar{meltdown}{a disastrous collapse and breakdown 灾难性崩溃（或瓦解）}. The slightest movement-trying to swallow, fqr example-was excruciating. Even the pressure of her cheek on the pillow was almost unbearable.
+	
+	在纽约市皇后区一间漆黑的房间里，31岁的时装设计师特蕾西? 塞尔\underline{感到自己奄奄一息}。 就在几个月前，她已经停止服用控制她关节炎的\underline{强}\underline{效免疫抑制药}。 她从没预见到接下来将要发生的事: 停药之后的反应最终使她全身剧烈疼痛，神经系统出现严重问题。 最轻微的动作—比如说试着吞咽—对她来说也痛苦不堪。 甚至将脸压在枕头上也几乎难以忍受。 
+	
+	\newpar Cyr is no wimp-diagnosed with juvenile rheumatoid arthritis at the age of two, she had endured the symptoms and the treatments (drugs, surgery) her whole life. But this time, she was way6 past her limits, and nothing her doctors did seemed to help. Either the disease was going to kill her or, pretty soon, she felt she might have to kill herself.
+	
+	塞尔并不是懦弱的人。 她在两岁时就被诊断得了幼年型类风湿性关节炎，一生都在忍?受着病症和治疗(药物、手术)的折磨。 但是这一次，她实在不堪忍受了，她的医生所做的一切似乎都不起作用。 要么让疾病结束她的生命，要么她就得很快了结自己的生命了。 
+	
+	\newpar As her sleepless nights wore on, though, her suicidal thoughts began to be interrupted by new feelings of gratitude. She was still in agony, but a new consciousness grew stronger each night: an awesome sense of liberation, combined with an all-encompassing feeling of sympathy and compassion. ``I felt stripped of everything I'd ever identified myself with,'' she said six months later. ``Everything I thought I'd known or believed in was useless-time, money, self-image, perception. Recognizing that was so freeing.''
+	
+	然而，在经历了若干个不眠之夜后，她想自杀的念头开始被新的感激之情所打断。 虽然她仍然感到痛苦，但一种新的意识每一夜都变得更加强烈:一种令人惊叹的解脱感，结合着一种包容一切的同情和怜悯的情感。 ``我感到一切我曾经用来认同?自己身份的东西都被剥夺了，''六个月后她这样说道，``一切我认为我知道或相信的事物—时间、金钱、自我形象、
+	
+	对事物的看法—都毫无价值了。 意识到这一点真是让我感到解脱。 ''
+	
+	\newpar Within a few months, she began to be able to move more freely, thanks to a cocktail of steroids and other drugs. She says now there's no question that her life is better. ``l felt I had been shown the secret of life and why we're here: to be happy and to nurture other life. It's that simple.''
+	
+	在几个月内，得益于类固醇加其他药物的鸡尾酒疗法，她开始能够更加自如地活动了。 她说，毫无疑问她现在的生活状况有了好转。 ``我感觉我窥探到了生命的秘密以及我们生存的意义，那就是快乐地生活，同时扶持他人。 就这么简单!''
+	
+	\newpar Her mind-blowing experience came as a total surprise. But that feeling of transformation is in some ways typical, says Rich Tedeschi, a professor of psychology at the University of North Carolina in Charlotte who coined the term ``post-traumatic growth''. His studies of people who have endured extreme events, like combat, violent crime or sudden serious illness show that most feel dazed and anxious in the immediate aftermath; they are preoccupied with the idea that their lives have been shattered. A few are haunted long afterward by memory problems, sleep trouble and similar symptoms of post-traumatic stress disorder 7. But Tedeschi and others have found that for many people-perhaps even the majority-life ultimately becomes richer and more Gratifying.
+	
+	她这种不可思议的经历完全是个惊喜。 但是北卡罗来纳大学夏洛特分校心理学教授里奇?特德斯基认为，这种转变的感觉从某些方面看却是很典型的。 里奇?特德斯基教授首创了``创伤后成长''一词。 他对那些经历了诸如搏斗、暴力犯罪、突患重病等极端事件的人群进行了研究，这些研究表明，在刚经历不幸后大多数人随即都会感到茫然和焦虑。 他们一心想的就是，自己的生活完全被毁了。 有少部分人事后很久了还不断被记忆问题、失眠以及类似的创伤后应激障碍所折磨。 但特德斯基和其他学者发现，对很多人(可能甚至是绝大多数人)来说，生活最终会变得更加丰富和更加令人满足。 
+	
+	\newpar Something similar happens to many people who experience a terrifying physical threat. In that moment, our sense of invulnerability is pierced, and the self-protective mental armor that normally stands between us and our perceptions of the world is torn away. Our everyday life scripts-our habits, self-perceptions and assumptions-go out the window, and we are left with a raw experience of the world.
+	
+	许多经历过恐怖的人身威胁的人会遇到类似的情况。 在事情发生的那一瞬间，我们的安全感被冲破了，平时处于我们与我们对世界的种种看法之间的自我保护的精神盔甲被剥离了。 我们的日常生活轨迹(我们的习惯、自我认识和主观意念)全部被抛到九霄云外，只剩下对世界的原始体验。 
+	
+	\newpar Still, actually implementing these changes, as well as fully coming to terms with a new reality, usually takes conscious effort. Being willing and able to take on this process is one of the major differences between those who grow through adversity and those who are destroyed by it. The people who find value in adversity aren't the toughest or the most rational. What makes them different is that they are able to incorporate what happened into the story of their own life.
+	
+	尽管如此，要实际实现这些转变并完全接受新的现实，通常需要有意识地付出努力。 是否愿意并有能力承担这个过程，就是那些在灾难中成长和那些被灾难所摧毁的人之间主要的区别之一。 认为灾难有价值的人并不是最坚强或最理性的人。 使他们与众不同的是他们能够将所遭遇的事融入他们自己的人生历程中。 ''
+	
+	\newpar Eventually, they may find themselves freed in ways they never imagined. Survivors say they have become more tolerant and forgiving of others, capable of bringing peace to formerly troubled relationships. They say that material ambitions suddenly seem silly and the pleasures of friends and family \elegantpar{paramount}{more important than anything else; supreme 最重要的; 至高无上的} and that the crisis \underline{allowed} them \underline{to} recognize life in line with their new priorities.
+	
+	最终，他们可能会发现自己以从未想到过的方式获得了解脱。 幸存者往往说他们变得更加宽容，也更能原谅别人，能够缓和原本糟糕的关系。 他们说物质追求突然间变得很无聊，而朋友和家庭带来的快乐变得极为重要，他们还说危机\underline{使}他们能够按照这些新的优先之事来重新认识生活。 
+	
+	\newpar People who have grown from adversity often feel much less fear, despite the frightening things they've been through. They are surprised by their own strength, confident that they can handle whatever else life throws at them. ``People don't say that what they went through was wonderful,'' says Tedeschi. ``They weren't \elegantpar{meaning}{intend (something) to occur or be the case
+		意欲, 打算} to grow from it. They were just trying to survive. But in retrospect, what they gained was more than they ever anticipated.''
+	
+	从灾难中成长起来的人尽管经历过恐怖的事情，但他们的恐惧感往往大为减少。 他们对自己的力量感到吃惊，相信不管今后生活中将要遭遇什么，他们都能应付。 特德斯基说:``人们不会说他们所经历的是美好的。 他们并不是特意要通过这样的经历来成长。 他们只是尽其所能生存下来。 但回顾起来，他们的收获远远大于他们所预料的。 
+	
+	\newpar In his recent book Satisfaction, Emory University psychiatrist Gregory Berns points to extreme endurance athletes who push themselves to their physical limits for days at a time. They cycle through \underline{the same} sequence of sensations \underline{as} do trauma survivors: self-loss, confusion and, finally, a new sense of mastery. For ultramarathoners, who regularly run 100-mile races that last more than 24 hours, vomiting and hallucinating are normal. After a day and night of running without stopping or sleeping, competitors sometimes forget who they are and what they are doing.
+	
+	埃默里大学精神病学家格列高利? 伯思斯在他的近作《满足》中指出，极限耐力运动员每次训练都要使自己的身体连续数天处于极限状态。 他们\underline{和}经历创伤的幸存者所经历的感觉过程\underline{一样}:自我失落，困惑，最后获得一种新的驾驭感。 对于经常跑超过24小时的l00英里比赛的超级马拉松运动员来说，呕吐和产生幻觉是常事。 在一昼夜不停歇不睡觉地跑步之后，竞赛者有时会忘了自己是谁，忘了自己在干什么。 
+	
+	\newpar For a more common example of growth through adversity, \elegantpar{look to}{depend on； turn to for help依赖；指望} one of life's biggest challenges: parenting. Having a baby has been shown to decrease levels of happiness. The sleep deprivation and the necessity of putting aside personal pleasure in order to care for an infant mean that people with newborns are more likely to be depressed and find their marriage \elegantpar{on the rocks}{(of a relationship or enterprise) experiencing difficulties and likely to fail}. Nonetheless, over the long haul\footnote{over a long period of time}, raising a child is one of the most rewarding and meaningful of all human undertakings. The short-term sacrifice of happiness is outweighed by other benefits, like fulfillment, \underline{altruism} and the chance to leave a meaningful Legacy.
+	
+	更普遍的在逆境中成长的例子要数生命中最大的挑战之一:为人父母。 生育孩子一直被认为会降低幸福程度。 为了照顾婴儿而睡眠不足并且必须将自己的消遣撇到一边，意味着有了新生儿的人更有可能感到抑郁并且面临婚姻的危机。 然而，长远看来，养育孩子是所有人类活动中最有意义、最值得去做的一件事情。 短时间内牺牲了幸福，却有了更多的收获，比如满足感、\underline{无私}以及有机会留下一笔意义深远的遗产。 
+	
+	\newpar \underline{Ultimately}, the emotional reward can compensate for the pain and difficulty of adversity. This perspective does not \elegantpar{cancel out}{ to reduce the effect of (something) : to be equal to (something) in force or importance but have an opposite effect 抵消，取消} what happened, but it puts it all in a different context: that it's possible to live an extraordinary\footnote{very unusual or remarkable
+		非凡的, 非同寻常的; 卓越的; 反常的} rewarding life even within the constraints and struggles we face. In some form or other, says King, we all must go through this realization. ``You're not going to be the person you thought you were, but here's who you are going to be instead-and that turns out to be a pretty great life.''
+	
+	总之，情感上的回报可以弥补灾难带来的痛苦和艰难。 这种精神收获并不能抵消所发生的苦难，但是它可以把这些苦难全部放在另一个不同的背景中来看待，. .那就是即使我们面临约束和挣扎，我们仍然可以生存得极有价值。 金指出，我们所有的人都必须以这样或那样的形式经历这种觉悟。 ``你将不再是自己心目中曾经的你，取而代之的是一个新的你—而事实会证明生活从此将非常美好。 ''
+	
+	\section{Commercialization and Changes in Sports}
+	
+	\setcounter{numpar}{0}
+	
+	\newpar Throughout history sports have been used as forms of public entertainment. However, sports have never been so heavily packaged, promoted, presented and played as commercial products as they are today. Never before have decisions about sports and the social relationships connected with sports been so clearly influenced by economic factors. The bottom line has replaced the goal line for many people, and sports no longer exist simply for the interests of the athletes themselves. Fun and ``good games'' are now defined in terms of gate receipts, concessions revenues, the sale of media rights, market shares, rating points, and advertising potential. Then, what happens to sports when they become commercialized? Do they change when they become dependent on gate receipts and the sale of media rights?
+	
+	在整个历史长河中，人们都是把体育当作某种形式的公众娱乐。 然而，体育从未像今天这样作为一种商业产品被如此盛大地包装、推广、呈现和开展，有关体育的决策以及与体育相关的社会关系也同样从未如此显然地受到商业因素的影响。 对许多人来说，账本底线已取代了球门线，体育不再只是为了运动员们自身的兴趣而存在。 今天，乐趣和``好比赛''的定义取决于门票收入、特许权收人、媒体传播权的出售、市场份额、收视率以及广告潜力。 那么，当体育变得商业化时，它会怎样?当体育变得依赖于门票收人和媒体传播权的出售时，它会发生变化吗?
+	
+	\newpar We know that whenever any sport is converted into commercial entertainment, it success depends on spectator appeal. Although spectators often have a variety of motives underlying their attachment to sports, their interest in any sporting event is usually related to a combination of three factors: the uncertainty of an event's outcome, the risk or financial rewards associated with participating in an event，and the anticipated display of excellence or heroics by the athletes. In other words, when spectators refer to a ``good game'' or an ``exciting contest'', they are usually talking about one in which the outcome was in doubt until the last minutes or seconds, one in which the stakes' were so high that athletes were totally committed to and engrossed in the action, or one in which there were a number of excellent or ``heroic'' performances. When games or matches contain all three of these factors, they are remembered and discussed for a long time.
+	
+	我们知道，每当任何一项体育运动被转化为商业性娱乐活动时，它的成功就依赖于观众的兴趣。 尽管观众对于体育的拥护背后潜藏着多种动机，但他们对体育比赛的兴趣通常与三种相结合的因素有关:比赛结果的不确定性，参加一项比赛相关的风险或经济回报，以及预期中的运动员的卓越、英勇表现。 换句话说，当观众提及一场``不错的比赛''或一场``激动人心的比赛''时，这场比赛，通常在比赛即将结束的最后几分钟甚至儿秒钟时，结果仍然扑朔迷离;或者比赛涉及高额奖金，因而运动员们都全身心地投入比赛。 或者比赛展示了许多出色的或者``英雄式''的表现。 只要运动比赛包含所有这三方面因素，人们就会长时间记得并讨论这场比赛。 
+	
+	\newpar Commercialization has not had a dramatic effect on the format and goals of most sports. In spite of the influence of spectators, what has occurred historically is that sports have maintained their basic format. Innovations have been made within this framework, rather than completely dismantling the design of a game. For example, the commercialization of the Olympic Games has led to minor rule changes in certain events, but the basic structure of each Olympic sport has remained much the same as it was before the days of corporate endorsements and the sale of television rights.
+	
+	商业化对于大多数体育运动的结构和目标没有太大的影响。 尽管观众会对其产生影响，但在历史上，运动项目保持了它们的基本结构。 创新也是在这一框架内进行的，并不会完全废除这项运动的基本设计。 例如、奥运会的商业化导致了某些赛事规则的微小变化但其每项运动的基本结构还是和商家赞助及电视转播权出售之前基本一致。 
+	
+	\newpar Commercialization seems to affect the orientations of sport participants more than it does the format and goals of sports. To make money on a sport, it's necessary to attract a mass audience to buy tickets or watch the events on television. Attracting and entertaining a mass audience is not easy because it's made up of many people who don't have technical knowledge about the complex athletic skills and strategies used by players and coaches. Without this technical knowledge, people are easily impressed by things extrinsic to the game or match itself; they get taken in by hype. During the event itself they often focus on things they can easily understand. They enjoy situations in which players take risks and face clear physical danger; they are attracted to players who are masters of dramatic expression or who are willing to go beyond and their normal physical limits to the point of endangering their safety and well-being; and they like to see players committed to victory no matter what the personal cost.
+	
+	看来，与运动的结构和目的相比，商业化更多的是影响运动参与者的取向。 若要通过一项运动盈利，就必须吸引广大观众买门票或在电视上观看比赛。 吸引和娱乐广大观众并非易事，因为这些观众中有很多人没有技木性的知识，因而不懂得运动员和教练采取的复杂竞技技巧和策略。 由于缺乏这些技术性知识，人们容易受到运动或赛事之外的东西的影响，容易受到天花乱坠的宜传的迷惑。 在比赛期间，他们经常关注那些他们容易理解的事情。 他们喜欢那种运动员冒险并明显面临身体危险的情境，他们喜爱那些搜长戏剧化表现或者愿意超越正常的生理极限以致威胁到自己的安全和健康的运动员。 他们喜欢看到运动员不惜代价，立志求胜。 
+	
+	\newpar For example, when people lack technical knowledge about basketball, they are more likely to talk about a single slam dunks than about the consistently flawless defense that enabled a team to win a game. Similarly, those who know little about the technical aspects of ice skating are more entertained by triple and quadruple jumps than by routines carefully choreographed and practiced until they are smooth and flawless. Without dangerous jumps, naive spectators get bored. They like athletes who project' exciting or controversial personas, and they often rate performances in terms of dramatic expression leading to dramatic results. They want to see athletes occasionally collapse as they surpass physical limits, not athletes who know their limits so well they can successfully compete for years without going beyond them.
+	
+	比如，当人们缺乏篮球方面的技术知识时，他们更津津乐道于某一个灌篮，而不会关注球队取胜必需的因素:自始至终配合得天衣无缝的后防。 同样，那些对滑冰技术知之甚少的人，他们更感兴趣的是三连跳或四连跳，而不是那些精心设计并训练直至流畅、完美的舞步。 没有惊险的跳跃，无知的观众会感到厌倦。 他们喜欢那些表现得激动人心或有争议性的运动员。 他们往往根据戏剧化的表现是否导致戏剧化的结果来评价比赛。 他们想看运动员在超越自己极限时偶尔的突然失败，而不是多年来稳操胜券，熟知自己极限而不去超越它的运动员。 
+	
+	\newpar When a sport comes to depend on entertaining a mass audience, those involved in the sport often revise their ideas about what is important in sport. This revision usually involves a shift in emphasis from what might be called an aesthetic orientation to a heroic orientation In fact, the people in sport may even refer to games or matches as ``show-time'', an iey may refer to themselves as entertainers as well as athletes. This does not mean that aesthetic orientations disappear, but it does mean that they often take a back seat to the heroic actions that entertain spectators who don't know enough to appreciate the strategic and technical aspects of the game or match.
+	
+	当一项体育运动变得依赖于娱乐广大观众时，对于运动中什么才是重要的，运动参与者们往往会改变观念。 这一改变常常意味着重心从所谓的美学取向向英雄主义取向转变。 其实，运动员可能甚至把运动或比赛称为``表演秀''，并把自己称作表演者兼运动员。 这并不意味着美学取向不复存在了，但是这确实意味着与英雄主义行为相比，它们常常退居其后。 英雄主义行为吸引着那些没有足够的知识欣赏运动或比赛的策略和技术的观众。 
+	
+	\newpar As the need to please naive audiences becomes greater, so does the emphasis on heroic orientations. This is why television commentators for US football games continually talk about danger, injuries, playing with pain, and courage. Some athletes, however, realize the dangers associated with heroic orientations and try to slow the move away from aesthetic orientations in their sports. For example, some former figure skaters have called for restrictions on the number of triple jumps that can be included in skating programs. These skaters are worried that the commercial success of their sport is coming to rely on the danger of movement rather than the beauty of movement. However, some skaters seem to be willing to adopt heroic orientations if this is what will please audiences and generate revenues. These athletes usually evaluate themselves and other athletes in terms of the sport ethic, and they learn to see heroic actions signs of true commitment and dedication to their sport.
+	
+	取悦无知观众的需求越强烈，就越会强调英雄主义取向。 这就是为什么美国橄榄球比赛的电视评论员喋喋不休地谈论危险、受伤、带伤比赛和胆量。 不过，有些运动员意识到了与英雄主义取向随之而来的危险，并试图在他们的运动中放慢偏离美学取向的步伐。 比如，一些前花样滑冰运动员已经呼吁限制滑冰项目中三连跳的数量。 这些滑冰运动员担心，他们的体育项目在商业上的成功正越来越依赖于动作的危险性，而不是动作的美感。 然而，另外一些滑冰运动员似乎愿意采取英雄主义取向，只要这样能取悦观众，获得收入。 这些运动员用体育道德规范去评价自己和他人，他们还学会把英雄主义行为看成是真正地投入及为运动献身的标志。 
+	
+	\newpar Commercialization also leads to changes in the organizations that control sports. When sports begin to depend on generating revenues, the control of sport organizations usually shifts further and further away from the players. In fact, the players often lose effective control over the conditions of their own participation in the sport. These conditions come under the control of general managers，team owners，corporate sponsors, advertisers, media personnel, marketing and publicity staff, professional management staff, accountants, and agents.
+	
+	商业化同样会导致那些控制体育的组织发生变化。 当体育开始依赖于创造收入时，体育组织的控制权就会离运动员越来越远。 事实上，运动员常常对于自身的体育参与环境失去有效控制。 这些环境越来越受控于下列人员:总经理、运动队老板、企业赞助商、广告商、传媒人员、营销和宜传推广人员、专业管理人员、会计师以及经纪人。 
+	
+	\newpar The organizations that control commercial sports are usually complex, since they are intended to coordinate the interests of all these people, but their primary goal is to maximize revenues. This means that organizational decisions generally reflect the combined economic interests of many people having no direct personal connection with a sport or with the athletes involved. The power to affect these decisions is grounded in a variety of resources, many of which are not even connected with sports. Therefore athletes in many commercial sports find themselves cut out of decision-making processes even when decisions affect their health and well-being.
+	
+	那些控制商业体育的组织通常非常复杂，这是因为它们企图协调上述所有人的利益，但它们的首要目标还是盈利最大化。 这意味着组织决策通常反映的是许多人的混合利益，而他们与体育或相关运动员没有直接联系。 影响这些决策的力量根植于各种不同的资源，其中许多甚至与体育没有关联。 因此，许多商业体育中的运动员发现自己被逐出了决策过程，即便这些决策影响到他们的健康和幸福。 
+	
+	\section{Oslp}
+	
+	\setcounter{numpar}{0}
+	
+	\newpar I remember on my first trip to Europe going alone to a movie in Copenhagen. In Denmark you are given a ticket for an assigned seat. I went into the cinema and discovered that my ticket directed me to sit beside the only other people in the place, a young couple locked in the sort of passionate embrace associated with dockside reunions at the end of long wars. I could no more have sat beside them than I could have asked to join in-it would have come to much the same thing- so I took a place a few discreet seats away.
+	
+	记得我第一次去欧洲旅行的时候，我在哥本哈根独自一人去看电影。 在丹麦，电影票是对号入座的。 (此文来自袁勇兵博客)我走进电影院，发现在我的票对应的座位旁，只有一对年轻情侣。 这对情侣如胶似漆地拥抱在一起，如同一场持久战争结束后码头上亲人的团聚。 我很不情愿坐在他们旁边，就如我绝不会要求加入他们的行为一样——这两者对我来说并没有什么不同——因此我谨慎地隔几个座位坐了下来。 
+	
+	\newpar People came into the cinema, consulted their tickets and filled the seats around us. By the time the film started there were about 30 of us sitting together in a tight pack in the middle of a vast and otherwise empty auditorium. Two minutes into the movie, a woman laden with shopping made her way with difficulty down my row, stopped beside my seat and told me in a stern voice, full of glottal stops and indignation, that I was in her place. This caused much play of flashlights among the usherettes and fretful re-examining of tickets by everyone in the vicinity until word got around that I was an American tourist and therefore unable to follow simple seating instructions and. I was escorted in some shame back to my assigned place.
+	
+	人们陆续地走进影院，参照电影票找到位子，在我们周围坐了下来。 电影开场时，这个宽敞空旷的观众席中间，扎堆地坐了约30人。 电影开场两分钟后，一个拎着大包 小包购物袋的女士艰难地挤到我这排，在我座位旁停下，并用严厉的口吻愤怒地朝我用充满了喉塞音的丹麦语说道，我坐在了她的位子上。 女引座员马上打开手电筒查看情况，身边所有的人都不安地重新确认自己票上的座位号，直到大家都清楚了，我是一个美国游客，因此没有遵循简单的就座指示。 在羞愧中我被送回指定的位子。 
+	
+	\newpar So we sat together and watched the movie, 30 of us crowded together like refugees in an overloaded lifeboat, rubbing shoulders and sharing small noises, and it occurred to me then that there are certain things that some nations do better than everyone else and certain things that they do far worse and I began to wonder why that should be.
+	
+	接下来我们坐在一起看电影，30人如同一艘超载的救生船上的难民一般挤作一团。 肩膀相互摩擦着，忍受着各种细小的噪声。 那时我想，有些国家在某些事情上做的比任 何其他国家都好，然而在另外一些事情上，他们却糟糕很多。 我开始思考为何会有如此反差。 
+	
+	\newpar Sometimes a nation's little contrivances are so singular and clever that we associate them with that country alone-double-decker buses in Britain, windmills in Holland (what an inspired addition- to a flat landscape: think how they would transform Nebraska)，sidewalk cafes in Paris. And yet there are some things that most countries do without difficulty that others cannot get a grasp of at all.
+	
+	有时候某个国家的小发明是如此独特和精巧，以至于我们总是由它而联想到这个国家——英国的双层巴士，荷兰的风车（给原本单调的景观增添了多么美妙的创意：想想这些风车是如何改变了内布拉斯加州），还有巴黎人行道上的露天咖啡馆。 然而， 也有一些事情，大部分国家能不费吹灰之力地办到，但某些国家却完全想不到。 
+	
+	\newpar The French, for instance, cannot get the hang of queuing. They try and try, but it is beyond them. Wherever you go in Paris, you see orderly lines waiting at bus stops, but as soon as the bus pulls up the line instantly disintegrates into something like a fire drill at a lunatic asylum as everyone scrambles to be the first aboard, quite unaware that this defeats the whole purpose of queuing.
+	
+	比如说，法国人无法掌握排队的窍门。 他们一遍遍地尝试，但这似乎超出了他们的能力范围。 无论你去巴黎的任何地方，总会看到整齐的队伍在公交车站候车。 但一旦公交车靠站，队伍立刻瓦解，就像精神病院的消防演习一样，所有人都争抢着第一个上车，完全没意识到，这样一来排队的意义就荡然无存了。 
+	
+	\newpar The British, on the other hand, do not understand certain of the fundamentals of eating, as evidenced by their instinct to consume hamburgers with a knife and fork. To my continuing amazement, many of them also turn their fork upside一down and balance the food on the back of it. I’ve lived in England for a decade and a half and 1 still have to quell an impulse to go up to strangers in pubs and restaurants and say, ``Excuse me. Can I give you a tip that'll help stop those peas bouncing all over the table?''
+	
+	另一方面，英国人则不能领略吃的基本要领。 证据就是他们本能地使用刀叉来食用汉堡。 更令我惊讶的是，他们大多数都把叉子颠倒放置，将食物搁在它的背上。 我已经 在英国居住了 15年，但我仍不得不压制这种冲动，想要走向酒吧或餐馆里的陌生人说：``打扰一下，可以允许我告诉你一个小技巧吗？(此文来自袁勇兵博客)那样你就不会把豆子散落在整张桌子上了。 
+	
+	\newpar Germans are flummoxed by humor, the Swiss have no concept of fun, the Spanish think there is nothing at all ridiculous about eating dinner at midnight, and the Italians should never, ever have been let in on the invention of the motor car.
+	
+	德国人被幽默困扰，瑞士人对乐趣毫无概念，西班牙人丝毫不觉得在半夜吃晚饭有什么滑稽之处，而意大利人从不，也绝不会让别人告诉他们汽车是如何发明的。 
+	
+	\newpar One of the small marvels of my first trip to Europe was the discovery that the world could be so full of variety, that there were so many different ways of doing essentially identical things, like eating and drinking and buying cinema tickets. It fascinated me that Europeans could at once be so alike-that they could be so universally bookish and cerebral, and drive small cars, and live in little houses in ancient towns, and love soccer, and be relatively unmaterialistic and law-abiding, and have chilly hotel rooms and cosy and inviting places to eat and drink-and yet be so endlessly, unpredictably different from each other as well. I loved the idea that you could
+	
+	\newpar never be sure of anything in Europe.
+	
+	这次欧洲之旅带给我很多惊奇的小事，其中一个就是我发现世界竟能如此多样化，对于本质上相同的事物处理起来却方式各异，比如说吃喝或是买电影票。 有趣的是，欧洲人有时可以突然变得如此相似——他们普遍好学而理性，开着小车，住在古镇的小房子里，喜欢足球，不怎么注重物质生活，遵纪守法，而且他们住寒冷的宾馆房间，去温暖舒适的地方吃喝——然而却同时拥有着如此琢磨不透、永无止尽的差异。 在欧洲没有什么是百分之百肯定的，对此我十分赞同。 
+	
+	\newpar I still enjoy that sense of never knowing quite what's going on. In my hotel in Oslo where I spent four days after returning from Hammerfest, the chambermaid each morning left me a packet of something called Bio Tex Bla, a ``minipakke for ferie, hybel og weekend'' according to the instructions. I spent many happy hours sniffing it and experimenting with it, uncertain whether it was for washing out clothes or gargling or cleaning the toilet bowl. In the end I decided it was for washing out clothes- it worked a treat-but for all I know for the rest of the week everywhere I went in Oslo people were saying to each other, ``You know, that man smelled like toilet-bowl cleaner.''
+	
+	我仍然享受着对事情进展的未知感。 从哈默菲斯特返回后，我在奥斯陆的宾馆呆了四天，女服务员每天早上都留给我一盒叫做Bio Tex Bla的东西，说明上说是一种 ``minipakke for ferie，hybel og weekend''。 我不清楚它到底是用来洗衣服的，还是漱口的， 或是用来淸洗抽水马桶的，我通过闻它的气味，并试验它各种可能的用法，度过了好几个快乐的小时。 最后我判定它是甩来洗衣服的——它的确有效——然而就我所知，在奥斯陆度过的剩下几周中，无论我去哪儿，都听见有人互相议论：``你知道吗?那个人身上有马桶清洁剂的味道。 ''
+	
+	\newpar When I told my friends in London that I was going to travel around Europe and write a book about it, they said, ``Oh, you must speak a lot of languages.''
+	
+	当我告诉伦敦的朋友，我将周游欧洲并写成书时，他们说：``喔，你肯定会说很多语言吧。 ''?
+	
+	\newpar ``Why, no,'' I would reply with a certain pride, ``only English,'' and they would look at me as if I were crazy. But that's the glory of foreign travel, as far as I am concerned. I don't want to know what people are talking about. I can't think of anything that excites a greater sense of childlike wonder than to be in a country where you are ignorant of almost everything. Suddenly you are five years old again. You can't read anything, you have only the most rudimentary sense of how things work, you can't even reliably cross a street without endangering your life. Your whole existence becomes a series of interesting guesses.
+	
+	``为什么，我不会，''我会带着一点傲气回答，``我只会英语。 ''然后他们就看着我，好像我疯了。 (此文来自袁勇兵博客)但是就我而言，那正是国外旅游的美妙之处。 我并不想知道人们在说些什 么。 置身于一个对你而言完全陌生的国家，能激发一种孩子般的好奇心。 除此之外，我想不出还有什么更好的办法。 突然之间你又回到了五岁。 你无法读懂任何东西，你对事物运行方式只有最基本的感知，你甚至无法安全地穿过马路。 你的整个存在变成了一系列有趣的猜想。 
+	
+	\newpar I get great pleasure from watching foreign TV and trying to imagine what on earth is gonging on. On my first evening in Oslo, I watched a science program in which two men in a studio stood at a lab table discussing a variety of sleek, rodent-like animals that were crawling over the surface and occasionally up the host's jacket. ``And you have sex with all these creatures, do you?``the host was saying.
+	
+	看国外电视节目，试着想象到底发生了什么事，这让我乐此不疲。 比如说，在奥斯陆 的第一个晚上，我收看一个科学节目，演播室里的两个男子站在一张实验桌旁，讨论着一种有着光滑皮毛的貌似啮齿目的动物，它们在桌面上爬行，偶尔爬上主持人的外套。 主持人正在说：``那么你与所有这些动物做爱，是吗？
+	
+	\newpar ``Certainly,'' replied the guest. ``You have to be careful with the porcupines, of course and the lemmings can get very neurotic and hurl themselves off cliffs if they feel you don't love them as you once did, but basically these animals make very affectionate companions, and the sex is simply out of this world.''
+	
+	``当然，''嘉宾回答道，``你必须对豪猪十分小心，当然，旅鼠若是感觉你不再像以前 那样爱它们，会变得焦躁不安并跳下悬崖，但总的来说，这些动物是非常亲切的伴侣， 并且性也是十分美妙的。 
+	
+	\newpar ``Well, I think that's wonderful. Next week we'll be looking at how you can make hallucinogenic drugs with simple household chemicals from your own medicine cabinet, but now it's time for the screen to go blank for a minute and then for the blights to come up suddenly on the host of the day looking as if he was just about to pick his nose. See you next week.''
+	
+	``哎呀，我觉得那很棒。 下周让大家见识一下你是怎么用药柜中的简单家庭用药制造出致幻药的。 (此文来自袁勇兵博客)该让荧幕空白几分光突然亮起，然后让灯光突然亮起，照在主持人身；让他看起来似乎就像正要抠鼻子。 下周见。 ''
+	
+	\newpar After Hammerfest, Oslo was simly wonderful. It was still cold and dusted with greyish snow, but it seemed positively tropical Hammerfest, and I abandoned all thought of buying a furry hat. I went to the museums and for a day-long way out around the Bygdoy' peninsula, where the city's finest houses stand on the wooded hillsides, with fetching views across the icy water of the harbour to the downtown. But mostly I hung around the city center, wandering back and forth between the railway station and the royal palace, peering in the store windows along Karl Johans Gate2, the long and handsome main pedestrian street, cheered by the bright lights, mingling with the happy, healthy, relentlessly youthful Norwegians, very pleased to be alive and out of Hanunerfest and in a world of daylight. When I grew cold, I sat in caf e s and bars and eavesdropped on conversations that I could not understand or brought out my Thomas Cook European Timetable and studied it with a kind of humble reverence, planning the rest of my trip.
+	
+	去过哈默菲斯特后，就货得奥斯陆简直妙不可言。 天气依然很冷，到处还撒着灰蒙蒙 的雪花，但是比起哈默菲斯特来那可要暖和多了，这也让我彻底放弃了想要买毛皮帽的想法。 我参观了博物馆，并花了一天时间游览巴度半岛，那里丛林茂密的山坡上矗立着该城市最美的房子，其视野可跨越海港冰面一直延伸到市区，十分迷人。 但是大多数时间我就在市中心闲逛，在火车站和皇宫之间来回溜达，在卡尔约翰街向街旁的商店橱窗里张望。 在路边明亮的灯光的照耀下, 长长的卡尔约翰步行街富丽堂皇， 与健康快乐、不屈不挠又充满朝气的挪威人融合在一起。 我很高兴能离开哈莫斯菲特并来到这个充满活力、犹如白昼的世界。 当我觉得寒意逼人时，我便进入咖啡馆或酒吧坐下，偷听那些我无法明白的对话，抑或拿出我的《托马斯库克欧洲时刻表》，满怀敬意地加以研究，做接下来的旅行安排。 
+	
+	\newpar Thomas Cook European Timetable is possibly the finest book ever produced. It is impossible to leaf through its 500 pages of densely printed timetables without wanting to dump a double armload of clothes into an old Gladstone4 and just take off. Every page whispers romance: ``Montreux-Zweisimmen-Spiez-Interlaken'', ``Beograd-Trieste-Venezia-Verona-Milano'', ``Goteborg-Lax'-(Hallsberg)-Stockholm'', ``Ventimiglia-Marseille-Lyon-Paris``5. Who could recite these names without experiencing a tug of excitement, without seeing in his mind's eye a steamy platform full of expectant travelers and piles of luggage standing beside a sleek, quarter-mile- long train with;a list of exotic locations slotted into every carriage? Who could read the names ``Moskva-Warszawa-Berlin-Basel-Geneve'' and not feel a melancholy envy for all those lucky people who get to make a grand journey across一storied continent?Who could glance at such an itinerary and not want to climb aboard? Well, Sunny von Biilow for a start. But as for me, I could spend hours just poring over the tables, each one a magical thicket of times, numbers, distances, mysterious little pictograms showing crossed knives and forks, wine glasses, daggers, miner's pickaxes (whatever could they be for?), ferry boats and buses, and bewilderingly abstruse footnotes.
+	
+	《托马斯库克欧洲时刻表》可能是已出版的最优秀的书籍。 当你迅速翻阅了其500页 密密印刷的时间表后，你必然有冲动想要往旅行包内塞进两抱衣服，然后立刻出发。  每一页都低声诉说着浪漫：蒙特勒—兹怀斯门—施皮茨—因特拉肯，贝尔格莱 德—的里雅斯特——威尼斯—维罗纳—米兰，哥德堡—拉赫斯河—(哈尔 斯贝里）—斯德哥尔摩，文堤米利亚—马赛—里昂—巴黎。 无论是谁吟诵这 些地名，都会感受到一股强烈的兴奋，想象着雾气蒙蒙的月台，以及在400多 米长的流线型车厢旁，站满了期待的旅客，堆满了行李，每个车厢里都放着一张写着外国地名的列表。 当读到莫斯科—华沙—柏林—巴塞尔—日内瓦这一系列地名时，又有谁不会伤感地羡慕那些能够横跨这个历史悠久的大陆的幸运儿呢?看过这樣的旅行安排，谁不想踏上行程呢？(此文来自袁勇兵博客)那么，桑尼. 冯. 比洛就是这样一个例子。 但是对我来说，我可以花大量时间就这样凝视着这些列表，每一份都不可思议地包含了时刻、数量、距离、画着交叉刀叉、酒杯、匕首、矿工镐（不管做何用途）、渡轮和巴士的神奇小图，以及令人困惑的深奥脚注。 
+	
+	\section{Is Google Making Us Stupid}
+	
+	\setcounter{numpar}{0}
+	
+	\newpar Over the past few years I've had an uncomfortable sense that someone, or something, has been tinkering with my brain, remapping the neural circuitry, reprograming the memory. My mind isn't going一 so far as I can tell一 but it's changing. I'm not thinking the way I used to think. I can feel it most strongly when I’m reading. Immersing myself in a book or a lengthy article used to be easy. My mind would get caught up in the narrative or the turns of the argument, and I’d spend hours strolling through long stretches of prose. That's rarely the case anymore. Now my concentration often starts to drift after two or three pages. I get fidgety, lose the thread, begin looking for something else to do. I feel as if I'm always dragging my wayward brain back to the text. The deep reading that used to come naturally has become a struggle. 
+	
+	在过去的几年里，我老有一种不祥之感，觉得有什么人，或什么东西，一直在我脑袋里捣鼓不停，重绘我的脑电图，重写我的脑内存。 我的思想倒没跑掉—到目前为止我还能这么说，但它正在改变。 我的思维方式在变。 这种感觉在我阅读的时候尤为强烈。 过去总是不费劲就能让自己沉浸在一本书或一篇长文章中，被其中的叙述或不同的论点深深吸引。 我还会花数小时徜徉在长篇散文中。 可如今这都不灵了。 现在，我翻上两三页书，注意力就开始不集中了。 我会变得烦躁，抓不住重点，开始想找点其他的事情做。 我感觉我似乎要硬拖着我任性的大脑才能回到文章中。 原本轻松自然的深度阅读，已成了痛苦挣扎。 
+	
+	\newpar I think I know what's going on. For more than a decade now, I've been spending a lot of time online, searching and surfing and sometimes adding to the great databases of the Internet. The Web has been a godsend to me as a writer. Research that once required days in the stacks or periodical rooms of libraries can now be done in minutes. A few Google searches, some quick clicks on hyperlinks, and I've got the telltale fact or pithy quote I was after. Even when I'm not working, I'm as likely as not to be foraging in the Web's info-thickets2-reading and writing emails, scanning headlines and blog posts, watching videos and listening to podcasts, or just tripping from link to link to link. (Unlike footnotes, to which they're sometimes likened, hyperlinks don't merely point to related works; they propel you toward them. )
+	
+	我想我知道到底是怎么一回事了。 十多年来，我在网上花了好多时间，在因特网的信息汪洋中冲浪、搜寻、添加。 对作家而言，网络就像个天上掉下来的聚宝盆。 过去要在书堆里或图书馆的期刊阅览室中花上好几天做的研究，现在几分钟就齐活。 ``谷歌''几下，快速点开几个链接，就可以找到我所需要的事实或者精炼的引证。 即使在工作之余，我也很有可能在信息丰富的网络里遨游—收发电子邮件、浏览头条新闻、点击博客、看视频、听播客或者只是从一个链接跳转到一个又一个链接。 (超链接常被比作脚注，但是和脚注不一样，超链接不仅仅链接到相关作品;它们还驱使你去点击创门。 )
+	
+	\newpar For me, as for others , the Net is becoming a universa一medium, the conduit for most of the information that flows through my eyes and ears and into my mind. The advantages of having immediate access to such an incredibly rich store of information are many, and they've been widely described and duly applauded. ``The perfect recall of silicon memory,'' Wired's0 Clive Thompson has written, ``can be an enormous boon to thinking.'' But that boon comes at a price. As the media theorist Marshall McLuhan pointed out in the 1960s, media are not just passive channels of information. They supply the stuff of thought, but they also shape the process of thought. And what the Net seems to be doing is chipping away at my capacity for concentration and contemplation. My mind now expects to take in information the way the Net distributes it: in a swiftly moving stream of particles. Once I was a scuba diver in the sea of words. Now I zip along the surface like a guy on a Jet Ski.
+	
+	对我来说，像对其他人也一样，网络已经成为了一种通用的媒介，大部分信息都通过这个渠道进人我们的眼、耳，最后进人我们的大脑。 能从这样一个异常丰富的信息库中直接获取信息，其优点是很多的，而且也得到了广泛的描述和适当的赞誉。 ``硅存储器的完美记忆性，''《连线》杂志的克莱夫?汤普森写道，``对于思想来说是一个大实惠。 ''但是这个实惠是要付出代价的。 (此文来自袁勇兵博客)就像媒体理论家马歇尔?麦克卢恩在上世纪60年代所指出的那样，媒体可不只是被动的信息渠道。 它们不但提供了思想的源泉，也塑造了思想的进程。 网络似乎粉碎了我专注与沉思的能力。 现如今，我的脑袋就盼着以网络提供信息的方式来获取信息:飞快的微粒运动。 曾经我是文字海洋中的潜水者，现在我则像是摩托艇骑手在海面上风驰电掣。 
+	
+	\newpar I’m not the only one. When I mention my troubles with reading to friends and acquaintances-literary types, most of them-many say they're having similar experiences. The more they use the Web, the more they have to fight to stay focused on long pieces of writing. Some of the bloggers I follow have also begun mentioning the phenomenon. Scott Karp, who writes a blog about online media, recently confessed that he has stopped reading books altogether. ``I was a lit major in college, and used to be a voracious book reader,'' he wrote. ``What happened?'' He speculates on the answer: ``What if I do all my reading on the web not so much because the way I read has changed, i. e. I'm just seeking convenience, but because the way I think has changed?''
+	
+	我并不是唯一一个有此感觉的人。 当我向文学界的朋友和熟人提到我在阅读方面的困扰，许多人说他们也有同样的感受。 他们上网越多，在阅读长文章时，就越难集中精力。 我所关注的一些博主也提到了类似的现象。 斯科特?卡普开了一个有关在线媒体的博客，最近他承认自己已经完全不读书了。  ``我大学读的是文学专业，曾经是一个嗜书如命的人，''他写道。 ``到底发生了什么事呢?''他推测出了一个答案:``如果对我来说，通过网络来阅读的真正理由与其说是我的阅读方式发生了改变，比如，我只是图个方便，不如说是我的思维方式在发生变化，那么我该怎么办呢?''
+	
+	\newpar Bruce Friedman, who blogs regularly about the use of computers in medicine, also has described how the Internet has altered his mental habits. ``I now have almost totally lost the ability to read and absorb a longish article on the web or in print,'' he wrote earlier this year. A pathologist who has long been on the faculty of the University of Michigan Medical School, Friedman elaborated on his comment in a telephone conversation with me. His thinking, he said, has taken on a ``staccato'' quality, reflecting the way he quickly scans short passages of text from many sources online. ``I can't read War and Peace anymore, ``he admitted ``I've lost the ability to do that. Even a blog post of more than three or four paragraph is too much to absorb. I skim it.''
+	
+	布鲁斯?弗里德曼经常撰写有关电脑在医学领域应用的文章。 他在早些时候同样提到因特网如何改变了他的思维习惯。 ``稍长些的文章，不管是网上的还是已经出版的，我现在几乎已经完全丧失了阅读它们的能力。 ''在密歇根大学医学院长期任教的病理学家布鲁斯，弗里德曼在电话里告诉我，由于上网快速浏览文章的习惯，他的思维呈现出一种``碎读''特性。 ``我再也读不了《战争与和平》了。 ''弗里德曼承认，``我失去了这个本事。 即便是一篇长达三四段的博客也难以消化。 我只能略微浏览一下。 ''
+	
+	\newpar Anecdotes alone don't prove much. And we still await the long-term neurological and psychological experiments that will provide a definitive picture of how the Internet use affects cognition. But a recently published study of online research habits, conducted by scholars from University College London, suggests that we may well be in the midst of a sea change in the way we read and think. As part of the five-year research program, the scholars examined computer logs' documenting the behavior of visitors to two popular research sites, one operated by the British Library and one by a UK educational consortium, that provide access to journal articles, e-books, and other sources of written information. They found that people using the sites exhibited ``a form of skimming activity'', hopping from one source to another and rarely returning to any source they'd already visited. They typically read no more than one or two pages of an article or book before they would ``bounce'' out to another site. Sometimes they'd save a long article, but there's no evidence that they ever went back and actually read it.         
+	
+	仅仅是趣闻轶事还不能证明什么。 我们仍在等待长期的神经学和心理学的实验，这将给因特网如何影响到我们的认识一个权威的定论。 伦敦大学学院的学者做了一个网络研读习惯的研究并发表了研究结果。 该研究指出，我们可能已经彻底置身于阅读与思考方式的巨变之中了。 作为五年研究计划的一部分，学者们检测了计算机日志，它跟踪记录了两个流行的搜索网站的用户行为。 其中一个网站是英国图书馆的，另一个是英国教育社团的，他们提供了期刊论文、电子书以及其他一些文献资源。 他们发现，人们上网时呈现出``一种浮光掠影般的形式''，总是从一个资源跳到另一个资源，并且很少返回他们之前访问过的资源。 他们常常还没读完一两页文章或书籍，就``弹''出来转到另一个网页去了。 有时候他们会保存一个篇幅长的文章，但没有任何证据表明他们曾经返回去认真阅读。 
+	
+	\newpar Thanks to the ubiquity of text on the Internet, not to mention the popularity of text- messaging on cell phones, we may well be reading more today than we did in the 1970s or 1980s, when television was our medium of choice. But it's a different kind of reading, and behind it lies a different kind of thinking-perhaps even a new sense of the self.' ``We are not only what we read,'' says Maryanne Wolf, a developmental psychologist at Tufts University and the author of Proust and the Squid: The Story and Science of the Reading Brain, ``We are how we read.'' Wolf worries that the style of reading promoted by the Net, a style that puts ``efficiency'' and ``immediacy'' above all else, may be weakening our capacity for the kind of deep reading that emerged when an earlier technology, the printing press, made long and complex works of prose commonplace. When we read online, she says, we tend to become ``mere decoders of information''. Our ability to interpret text, to make the rich mental connections that form when we read deeply and without distraction, remains largely disengaged.
+	
+	多亏铺天盖地的网络文本，更别说当下时兴的手机短信，可供我们阅读的东西很可能比上世纪七八十年代要多了，那时，我们选择的媒体还是电视。 但是，这已是另一种阅读模式，背后隐藏的是另一种思考方式—也许甚至是一种全新的自我意识。 ``不仅阅读的内容塑造了我们，''塔夫茨大学的发展心理学家、《普鲁斯特与鱿鱼:阅读思维的科学与故事》的作者玛丽安娜?沃尔夫说，``阅读方式也体现了我们自身。 ''沃尔夫担忧，网络所倡导的将``丰富''与``时效性''置于首位的阅读方式可能已经削弱了那种深度阅读能力。 深度阅读能力的形成应归功于早期印刷术的发明，有了它，长而复杂的散文作品也相当普遍了。 然而，她说，当我们在线阅读时，我们往往只是一``信息解码器''而已。 我们对文句的设释，心无旁鹜、深度阅读时形成的丰富的精神联系，这些能力很大程度上已经消失了。 
+	
+	\newpar Reading, explains Wolf, is not an instinctive skill for human beings. It's not etched into our genes the way speech is. We have to teach our minds how to translate the symbolic characters we see into the language we understand. And the media or other technologies we use in learning and practicing the craft of reading play an important part in shaping the neural circuits inside our brains. Experiments demonstrate that readers of ideograms, such as the Chinese, develop a mental circuitry for reading that is very different from the circuitry found in those of us whose written language employs an alphabet. The variations extend across many regions of the brain, including those that govern such essential cognitive functions as memory and the interpretation of visual and auditory stimuli. We can expect as well that the circuits woven by our use of the Net will be different from those woven by our reading of books and other printed Works.
+	
+	沃尔夫认为，阅读并非人类与生俱来的技巧，它不像说话那样融人了我们的基因。 我们得训练自己的大脑，让它学会如何将我们所看到的字符译解成自己可以理解的语言。 而媒体或其他我们用于学习和练习阅读的技术在塑造我们大脑的神经电路中扮演着重要角色。 实验表明，表意字读者(如中国人)为阅读所创建的神经电路和我们这些用字母语言的人有很大的区别。 这种变化延伸到大脑的多个区域，包括那些支配诸如记忆、视觉设释和听觉刺激这样的关键认知功能的部位。 我们可以预料，使用网络阅读形成的思维，一定也和通过阅读书籍及其他印刷品形成的思维不一样。 
+	
+	\newpar Sometime in 1882, Friedrich Nietzsche bought a typewriter. His vision was failing, and keeping his eyes focused on a page had become exhausting and painful, often bringing on crushing headaches. He had been forced to curtail his writing, and he feared that he would soon have to give it up. The typewriter rescued him, at least for a time. Once he had mastered touch-typing, he was able to write with his eyes closed, using only the tips of his fingers. Words could once again flow from his mind to the page.
+	
+	1882年，弗里德里希?尼采买了台打字机。 此时的他，视力下降得厉害，长时间盯着一张纸会令他感觉疲惫、疼痛，还常常引起剧烈的头痛。 他只得被迫缩减他的写作时间，并担心自己今后恐怕不得不放弃写作了。 但打字机救了他，起码一度挽救过他。 他终于熟能生巧，闭着眼睛只用手指尖也能打字—盲打。 心中的词句又得以倾泻于纸页之上了。 
+	
+	\newpar But the machine had a subtler effect on his work. One of Nietzsche's friends, a composer, noticed a change in the style of his writing. His already terse prose had become even tighter, more telegraphic. ``Perhaps you will through this instrument even ntake to a new idiom,'' the friend wrote in a letter, noting that, in his own work, his ''`thoughts' in music and language often depend on the quality of pen and paper.''
+	
+	然而，新机器也使其作品的风格发生了微妙的变化。 尼采的一个作曲家朋友注意到他行文风格的改变。 他那已经十分简练的行文变得更紧凑、‘更电文式了。  ``或许就因为这个仪器，你甚至可能会喜欢上一个新短语，''这位朋友在一封信中提到，在他自己的作品中，他``在音乐和语言方面的‘思想’常常要依赖于笔和纸的质量''。 
+	
+	\section{An Alpine Divorce}
+	
+	\setcounter{numpar}{0}
+	
+	\newpar John Bodman was a man who was always at one extreme or the other. This probably would have mattered little had he not married a wife whose nature was an exact duplicate of his own. 
+	
+	约翰?伯德曼是一个常常走极端的人。 这本来应该没什么，但可惜，他妻子的性格整个儿是他的翻版。 
+	
+	\newpar Doubtless there exists in this world precisely the right woman for any given man to marry and vice versa; but when you consider that one human being has the opportunity of being acquainted with only a few hundred people, and out of the few hundred that there are but a dozen or less whom one knows intimately, and out of the dozen, one or two close friends at most, it will easily be seen, when we remember the number of millions who inhabit this world, that probably, since the Earth was created, the right man has never yet met the right woman. The mathematical chances are all against such a meeting, and this is the reason that divorce courts exist. Marriage at best is but a compromise, and if two people happen to be united who are of an uncompromising nature there is bound to be trouble.
+	
+	毋庸置疑，对于任何一个男人，这世上总会有一个相当合适的女人能和他成家，反之亦然。 但是如果你考虑一下:每个人仅有机会结识几百个人而已，在这几百个人之中熟知的只有那么干几人甚至更少，在这十几个人之中又最多只有一两个知心朋友;别忘了，居住在这世上的人有多少个百万，因此显而易见:自地球存在以来，这合适的男人极有可能从来就没有遇到过他那个合适的女人。 。 从概率上来讲，这样相遇的机会微乎其微，这也正是离婚法庭存在的原因。 婚姻充其量不过是一种妥协，而如果恰好两个个性上互不妥协的人结合了，那就肯定会有麻烦。 
+	
+	\newpar In the lives of these two young people there was no middle distance. The result was bound to be either love or hate, and in the case of Mr. and Mrs. Bodman it was hate of the most bitter and egotistical kind.
+	
+	对于两个这样的年轻人来说，生活没有什么中间点，其结局注定要么是爱，要么是恨，而就伯德曼夫妇而言，他们到头来有的是那种最刻骨、最傲慢的恨。 
+	
+	\newpar In some parts of the world, incompatibility of temper is considered a just cause for obtaining a divorce, but in England no such subtle distinction is made, and so until the wife became criminal, or the man became both criminal and cruel, these two were linked together by a bond that only death could sever.' Nothing can be worse than this state of things, and the matter was only made the more hopeless by the fact that Mrs. Bodman lived a blameless life, while her husband was no worse than the majority of men. Perhaps, however, that statement held only up to a certain point, for John Bodman had reached a state of mind in which he resolved to get rid of his wife at all hazards. If he had been a poor man he would probably have deserted her, but he was rich, and a man cannot freely leave a prospering business because his domestic life happens not to be happy.
+	
+	在这世界上的某些地方，夫妻性情不合就能够成为离婚的正当理由，但是在英格兰，并没有如此微妙的区分，所以除非妻子犯罪，或丈夫犯罪并且为人残暴，否则两者的婚姻关系将一直维系下去，直至死神将他们分开。 没有什么比这种事情更糟糕的了，而更令人绝望的是伯德曼太太为人无可厚非，而她丈夫也并不比一般男人差。 然而，也许上面的表述只能说在某种程度上是正确的，因为约翰?伯德曼已经忍无可忍，下定决心不管付出什么代价也要摆脱他的妻子。 如果他是个穷人，也许他会抛弃她，但是他很富有，而一个人不能因为家庭生活碰巧不幸就轻易放弃一份蒸蒸日上的事业。 
+	
+	\newpar When a man's mind dwells too much on one subject, no one can tell just how far he will go. The mind is such a delicate instrument that it is easily thrown off balance. Bodman's friends-for he had friends-claimed that his mind became unhinged. Whether John Bodman was sane or insane at the time he made up his mind to murder his wife, will never be known, but there was certainly craftiness in the method he devised to make the crime appear the result of an accident. Nevertheless, cunning is often a quality in a mind that has gone wrong.
+	
+	一个人的心思要是太专注于一件事情，没有人敢说他最后会做出什么来。 大脑是如此脆弱的一个思维工具，以至于它容易失去平衡。 伯德曼的朋友(他确实有几个朋友)事后声称他精神错乱。 下定决心要谋杀妻子时，约翰?伯德曼的神智清醒还是不清醒，现在已无从知晓，但无疑他把谋杀方案设计成看起来像是意外事件，这种方式的确很狡猾。 不过，一般来说，脑子有问题的人才狡猾。 
+	
+	\newpar Mrs. Bodman well knew how much her presence afflicted her husband, but her nature was as relentless as his, and her hatred of him was, if possible, more bitter than his hatred of her. Wherever he went she accompanied him, and perhaps the idea of murder would never have occurred to him if she had not been so persistent in forcing her presence upon him at all times and on all occasions. So, when he announced to her that he intended to spend the month of July in Switzerland, she said nothing, but made her preparations for the journey. On this occasion he did not protest, as was usual with him, and so to Switzerland this silent couple departed.
+	
+	伯德曼太太非常清楚，她的存在相当折磨她的丈夫，可她的冷酷无情跟他不相上下，而她对他的恨—有可能的话—恐怕比他对她的恨还更人骨。 不管他去哪儿，她都跟着。 要不是任何时间任何场合，她都要顽固地强行出现在他面前，他也许永远不会心生谋杀之念。 就这样，他一跟她说打算七月份去瑞士度假，她二话不说就打点行李。 往常他总会抗议，但这次没有，于是这对无话可说的夫妇动身去了瑞士。 
+	
+	\newpar There was a hotel near the mountain-tops which stood on a ledge over one of the great glaciers. It was a mile and a half above sea level, and it stood alone, reached by a toilsome road that zigzagged up the mountain for six miles. There was a wonderful view of snow-peaks and glaciers fro钾the verandahs of this hotel, and in the neighborhood were many picturesque walks to points more or less dangerous.
+	
+	有一间旅馆位于一座很高的冰川的脊架上，离山峰只有几步之遥. 旅馆海拔一点五英里，孑然独立，仅有一条长六英里、盘旋而上的崎岖山路可以到达. 在旅馆的回廊可以观赏到雪峰和冰川的美景。 旅馆附近小道遍布，沿路风景如画，但通往的地点多少都带点儿危险。 
+	
+	\newpar John Bodman knew the hotel well, and in happier days he had been intimately acquainted with the vicinity. Now that the thought of murder arose in his mind, a certain spot two miles distant from this inn continually haunted him. It was a point of view overlooking everything, and its extremity was protected by a low and crumbling wall. He arose one morning at four o'clock, slipped unnoticed out of the hotel, and went to this point, which was locally named the Hanging Outlook. His memory had served him well. It is exactly the spot, he said to himself. The mountain which rose up behind it was wild and precipitous. There were no inhabitants nearby to overlook the place. The distant hotel was hidden by a shoulder of rock.
+	
+	约翰?伯德曼对这家旅馆很熟悉，以前日子还挺幸福的时候他常来这一带。 如今既然已生谋杀之念，他就总是不由自主地想起距离客栈两英里的某个地方。 从那地方可以俯瞰周围，它的尽头被一堵破败的矮墙挡住。 一天凌晨四点，他偷偷溜出旅馆，来到了这儿—当地人叫``悬望角''。 这儿和他印象中的丝毫不差。 就是这里了，他对自己说。 ``悬望角''背靠的山荒芜而陡峭，附近也无人居住，所以没人会俯视这里。 而且远处的旅馆还被山肩遮住了。 
+	
+	\newpar One glance over the crumbling wall at the edge was generally sufficient for a visitor of even the strongest nerves. There was a sheer drop'' of more than a mile straight down, and at the distant bottom were jagged rocks and stunted trees that looked, in the blue haze, like shrubbery.
+	
+	站在破墙边沿朝外望，胆子再大的游客也不敢看第二眼。 峭壁陡直垂下约有一英里，底下怪石林立，杂树丛生，蓝色雾霭笼革下，看起来就像灌木丛。 
+	
+	\newpar ``This is the spot,'' said the man to himself, ``and tomorrow morning is the time.''
+	
+	``就是这里了!''他想，``而且就明天早上!''
+	
+	\newpar John Bodman had planned his crime as grimly and relentlessly, and as coolly, as he had ever concocted a deal on the stock exchange. There was no thought in his mind of mercy for his unaware victim. His hatred had carried him far.
+	
+	约翰?伯德曼冷酷，无情，沉着地谋划着他的罪行，一如他在证券交易所策划交易。 对于那位还蒙在鼓里的受害者，他心中没有一丝怜悯。 怨恨让他丧失了所有理智。 
+	
+	\newpar The next morning after breakfast, he said to his wife: ``I intend to take a walk in the mountains. Do you wish to come with me?''
+	
+	第二天，用过早餐，他对妻子说:``我想去山里面走走。 你想不想跟我一起去?''
+	
+	`Yes,'' she answered briefly.
+	
+	``好啊，''她回答得很干脆。 
+	
+	\newpar ``Very well, then,'' he said, ``I shall be ready at nine o'clock.''
+	
+	``那就好，''他说:``我九点出门。 ''
+	
+	\newpar At that hour they left the hotel together, to which he planned to return alone shortly. They spoke no word to each other on their way to the Hanging Outlook. The path was practically level, skirting the mountains, for the Hanging Outlook was not much higher above the sea than the hotel.
+	
+	九点整，两个人一起出了旅馆。 按计划，用不了多久他就会一个人回来。 一路上谁也没说话，只是在山间绕来绕去，基本上是平路，因为``悬望角''的海拔和旅馆差不多。 
+	
+	\newpar John Bodman had formed no fixed plan for his procedure when the place was reached. He resolved to be guided by circumstances. Now and then a strange fear arose in his mind that she might cling to him and possibly drag him over the precipice with her. He found himself wondering whether she had any premonition of her fate, and one of his reasons for not speaking was the fear that a tremor in his voice might possibly arouse her suspicions. He resolved that his action should be sharp and sudden, that she might have no chance either to help herself or to drag him with her. Of her screams in that desolate region he had no fear. No one could reach the spot except from the hoteL and no one that morning had left the premises.   16到了目的地后，约翰?伯德曼也没有什么固定计划，他决定伺机而行。 他心中时不时生出一种恐惧，害怕她会死死地拽住自己，一起坠下悬崖。 他不自觉地想:厄运当头，她是否已有预感?他一直没有说话，就是怕自己颤抖的声音会引起她的怀疑。 他决心要突然行动，千脆利落，让她无法自救，更没机会把他也拉下去。 至于她要尖叫，他倒是一点也不害怕。 因为这地方人迹罕至，只有从旅馆有一条路可以过来，而他知道那天早晨没有人离开那幢楼。 
+	
+	\newpar Curiously enough. when they came within sight of the Hanging Outlook, Mrs. Bodman stopped and shuddered. Bodman looked at her through the narrow slits of his veiled eyes, and wondered again if she had any suspicion. No one can tell, when two people walk closely together, what unconscious communication one mind may have with Another.
+	
+	这时``悬望角''已经在望了，伯德曼太太却停住了脚步，还打了个冷战，这着实令人怀疑。 伯德曼先生眼睛微眯，审视着太太，又开始怀疑她是否已有所警觉。 没人敢说，??两个人这样紧挨着走路，他们的大脑之间会有什么无意识的交流。 
+	
+	\newpar ``What is the matter?'' he asked gruffly. ``Are you tired?''
+	
+	``怎么了?''他生硬地问道，``累了?''
+	
+	\newpar ``John,'' she cried, with a gasp in her voice, calling him by his Christian name for the first time in years, ``don't you think that if you had been kinder to me at first, things might have been different?''
+	
+	``约翰，''她叫道，声音中带着喘息，好多年没有叫过他的教名了，``你不觉得如果你当初对我好点儿，事情也许会不一样?''
+	
+	\newpar ``It seems to me,'' he answered, not looking at her, ``that it is rather late in the day for discussing that question.''
+	
+	``我觉得，''他答道，眼睛看着别处，``现在讨论这个问题已经太晚了。 ''
+	
+	``I have much to regret,'' she said quaveringly. ``Have you nothing?''
+	
+	``我有很多遗憾，''她声音发颤，``你就没有?''
+	
+	`No,'' he answered. 22``没有，''他答道。 
+	
+	\newpar ``Very well,'' replied his wife, with the usual hardness returning to her voice, ``I was merely giving you a chance.''
+	
+	``很好，''伯德曼太太答道，语气又恢复了一贯的生硬，``我只是想给你一次机会。 '' Her husband looked at her suspiciously.
+	
+	她丈夫盯着她，心生疑虑。 
+	
+	\newpar ``What do you mean?'' he asked. ``Giving me a chance? I want no chance nor anyhing else from you. A man accepts nothing from one he hates. My feelings towards you are, I imagine, no secret to you. We are tied together, and you have done your best to make the bondage insupportable.''
+	
+	``你什么意思?''他问，``给我机会?我不要你的机会，也不要你别的什么。 男人不会接受他憎恨的人的任何东西。 我想我对你的感觉对你来说不是秘密。 我们是硬绑在一起的，而你更是想方设法让这份关系变得让人忍无可忍。 ''
+	
+	\newpar ``Yes,'' she answered, with her eyes on the ground, ``we are tied together-we are tied together!''
+	
+	``没错，''她答道，眼睛看着地上，``我们是绑在一起的—我们是绑在一起的!''
+	
+	\newpar She repeated these words under her breath as they walked the few remaining steps to the Outlook. Bodman sat down upon the crumbling wall. The woman dropped her alpenstock on the rock, and walked nervously to and fro, clasping and unclasping her hands. Her husband caught his breath as the terrible moment drew near.
+	
+	她低声反复嘀咕着这句话，两人走完剩下的几步来到了``悬望角''。 伯德曼坐在那摇摇欲坠的破墙上。 他妻子则把登山杖扔在了石头上，心神不宁地走来走去，拳头摄了又松，松了又撰。 随着那可怕时刻的临近，他屏住了呼吸。 
+	
+	. ``Why do you walk about like a wild animal?'' he cried. ``Come here and sit down beside me, and be still.''
+	
+	``你干嘛像个野兽走来走去?''他叫道，``过来坐我旁边，安静点。 ''
+	
+	\newpar She faced him with a light he had never before seen in her eyes-a light of insanity and of hatred.
+	
+	她面对着他，眼中闪耀着一种他从未见过的光芒—一种疯狂和僧恨的光芒。 
+	
+	\newpar ``I walk like a wild animal,'' she said, ``because I am one. You spoke a moment ago of your hatred of me, but you are a man, and your hatred is nothing to mine. Bad as you are, much as you wish to break the bond which ties us together, there are still things which I know you would not stoop to. There is no thought of murder in heart, but there is in mine.''
+	
+	她说:``我走起来像个野兽，因为我本来就是。 你刚才说了你对我的恨，但你是男的，比起我的恨你的不值一提。 尽管你人很坏，非常想了断这份将我们绑在一起的关系，但我知道有些事你还是不会去做的。 我知道你没想过谋杀我，但是我想过。 ''
+	
+	\newpar The man nervously clutched the stone beside him, and gave a guilty start as she mentioned murder.
+	
+	听到谋杀，他不由得一惊，心里有些负罪感，双手紧张地抓着身旁的石头。 
+	
+	\newpar ``Yes,'' she continued, ``I have told all my friends in England that I believed you intended to murder me in Switzerland.''
+	
+	``是的，''她接着说，``我已经跟我英格兰的所有朋友说我肯定你打算在瑞士谋杀我。 '' ``Good Lord!'' he cried. ``How could you say such a thing?''
+	
+	``我的上帝!你怎么能说出这样的话?''他大叫。 
+	
+	\newpar ``I say it to show how much I hate you-how much I am prepared to give up for revenge. I have warned the people at the hotel, and when we left two men followed us. The proprietor tried to persuade me not to accompany you. In a few moments those two men will come in sight of the Outlook. Tell them, if you think they will believe you, that it was an accident.''
+	
+	``我这么说是要让你瞧瞧我有多恨你，让你瞧瞧为了报复你我准备付出什么样的代价。 我已经让旅馆的人提高警惕，我们出门时就有两个人跟着我们。 旅馆老板还劝我别跟你来。 再过一会儿那两个人就会看到``悬望角''了。 (此文来自袁勇兵博客)如果你觉得他们会相信你的话，那你就跟他们说只是个意外吧。 ''
+	
+	\newpar The mad woman tore from the front of her dress shreds of lace and scattered them around. Bodman started up to his feet, crying, ``What are you about?'' But before he could move toward her she threw herself over the wall, and went shrieking and whirling down the awful abyss.
+	
+	这个疯女人一把扯碎了裙子前片上的花边，并撒落一地。 伯德曼站起身，喊道:``你在做什么?''但是，他还没来得及靠近她，她就已经跳过矮墙，尖叫着，翻滚着，掉进了那令人生畏的万丈深渊。 
+	
+	\newpar The next moment two men came hurriedly round the edge of the rock, and found the man standing alone. Even in his bewilderment, he realized that if he told the truth he would not be believed.
+	
+	不一会儿，有两个人急急忙忙来到石头边，发现伯德曼一个人愣在那里。 尽管内心一团乱麻，但他知道就算实话实说也没人会相信他。 
+	
+	\section{Inaugural Address}
+	
+	\setcounter{numpar}{0}
+	
+	\newpar Vice President Johnson, Mr. Speaker, Mr. Chief Justice, President Eisenhower, Vice President Nixon, President Truman, reverend clergy, fellow citizens, we observe today not a victory of party, but a celebration of freedom—symbolizing an end, as well as a beginning—signifying renewal, as well as change. For I have sworn before you and Almighty God the same solemn oath our forebears prescribed nearly a century and three quarters ago.
+	
+	约翰逊副总统，主持人先生，首席大法官先生，艾森豪威尔总统，尼克松副总统，杜鲁门总统，尊敬的牧师，我的公民同胞们，今天我们庆祝的不是政党的胜利，而是自由的胜利。 这象征着一个结束，也象征着一个开端;意味着延续也意味着变革。 因为我已在你们和全能的上帝面前，宣读了我们的先辈在大约175年前拟定的庄严誓言。 
+	
+	\newpar The world is very different now. For man holds in his mortal hands the power to abolish all forms of human poverty and all forms of human life. And yet the same revolutionary beliefs for which our forebears fought are still at issue around the globe—the belief that the rights of man come not from the generosity of the state, but from the hand of God.
+	
+	当今的世界已经大不相同。 人类的巨手掌握的力量既能消除人间一切形式的贫困，也能毁灭一切形式的人类生命。 但我们的先辈为之奋斗的那些革命信念，在世界各地仍然处于争论之中。 这个信念就是:人的权利并非来自国家的慷慨，而是来自上帝的恩赐。 
+	
+	\newpar We dare not forget today that we are the heirs of that first revolution. Let the word go forth from this time and place, to friend and foe alike, that the torch has been passed to a new generation of Americans—born in this century, tempered by war, disciplined by a hard and bitter peace, proud of our ancient heritage—and unwilling to witness or permit the slow undoing of those human rights to which this Nation has always been committed, and to which we are committed today at home and around the world.
+	
+	今天，我们不敢忘记我们是第一次革命的继承者。 让我在此时此地告诉我们的朋友，同样也告诉我们的敌人:这支火炬已经传递给新一代美国人。 这一代人出生在本世纪，在战争中受过锻炼，在艰难困苦的和平时期受过磨炼，他们为我国悠久的传统感到自豪—他们不愿目睹或听任人权渐趋毁灭，对于这些人权我国一向坚定不移，而且在当今国内和世界范围我们也同样全力拥护。 
+	
+	\newpar Let every nation know, whether it wishes us well or ill, that we shall pay any price, bear any burden, meet any hardship, support any friend, oppose any foe, in order to assure the survival and the success of liberty.
+	
+	让每个国家都知道—不论它希望我们繁荣还是希望我们衰落—为确保自由的存在和胜利，我们将付出任何代价，承受任何重负，应付任何艰难，支持任何朋友，反抗任何敌人。  This much we pledge—and more.
+	
+	这些就是我们的誓言—而且还有更多。 
+	
+	\newpar To those old allies whose cultural and spiritual origins we share, we pledge the loyalty of faithful friends. United, there is little we cannot do in a host of cooperative ventures. Divided, there is little we can do—for we dare not meet a powerful challenge at odds and split asunder.
+	
+	对那些和我们有着共同文化和精神渊源的老盟友，我们保证待以挚友那样的忠诚。 如果我们团结一致，就能在许多合作事业中无往不胜。 如果我们分歧对立，就会一事无成—因为我们不敢在争吵不休、四分五裂时迎接强大的挑战。 
+	
+	\newpar To those new States whom we welcome to the ranks of the free, we pledge our word that one form of colonial control shall not have passed away merely to be replaced by a far more iron tyranny. We shall not always expect to find them supporting our view. But we shall always hope to find them strongly supporting their own freedom—and to remember that, in the past, those who foolishly sought power by riding the back of the tiger ended up inside.
+	
+	对那些我们欢迎其加入到自由行列中来的新国家，我们格守我们的誓言:决不让一种更为残酷的暴政来取代一种消失的殖民统治。 我们并不总是指望他们会支持我们的观点。 但我们始终希望看到他们坚强地维护自己的自由—而且要记住，在历史上，凡愚教地狐假虎威者，终必葬身虎口。 
+	
+	\newpar To those peoples in the huts and villages across the globe struggling to break the bonds of mass misery, we pledge our best efforts to help them help themselves, for whatever period is required—not because the Communists may be doing it, not because we seek their votes, but because it is right. If a free society cannot help the many who are poor, it cannot save the few who are rich.
+	
+	对世界各地身居茅舍和乡村、为摆脱普遍贫困而斗争的人们，我们保证尽最大努力帮助他们自立，不管需要花多长时间。 之所以这样做，并不是因为共产党可能正在这样做，也不是因为我们需要他们的选票，而是因为这样做是正确的。 自由社会如果不能帮助众多的穷人，也就无法保全那些少数的富人。 
+	
+	\newpar To our sister republics south of our border, we offer a special pledge—to convert our good words into good deeds—in a new alliance for progress—to assist free men and free governments in casting off the chains of poverty. But this peaceful revolution of hope cannot become the prey of hostile powers. Let all our neighbors know that we shall join with them to oppose aggression or subversion anywhere in the Americas. And let every other power know that this Hemisphere intends to remain the master of its own house.
+	
+	对我国南面的姐妹共和国，我们提出一项特殊的保证:在争取进步的新同盟中，把我们善意的话变为善意的行动，帮助自由的人们和自由的政府摆脱贫困的枷锁。 但是，这种充满希望的和平革命决不可以成为敌对国家的牺牲品。 我们要让所有邻国都知道，我们将和他们在一起，反对在美洲任何地区进行侵略和颠覆活动。 让所有其他国家都知道，本半球的人仍然想做自己家园的主人。 
+	
+	\newpar To that world assembly of sovereign states, the United Nations, our last best hope in an age where the instruments of war have far outpaced the instruments of peace, we renew our pledge of support—to prevent it from becoming merely a forum for invective—to strengthen its shield of the new and the weak—and to enlarge the area in which its writ may run.
+	
+	对联合国，主权国家的世界性议事机构，我们在战争手段大大超过和平手段的时代里最后的、最美好的希望所在，我们重申予以支持:防止它仅仅成为谩骂的场所;加强它对新生国家和弱小国家的保护;扩大它的行使法令的管束范围。 
+	
+	\newpar Finally, to those nations who would make themselves our adversary, we offer not a pledge but a request: that both sides begin anew the quest for peace, before the dark powers of destruction unleashed by science engulf all humanity in planned or accidental self-destruction. 最后，对那些与我们作对的国家，我们提出一个要求而不是一项保证:在科学释放出可怕的破坏力量，把全人类卷人预谋的或意外的自我毁灭的深渊之前，让我们双方重新开始寻求和平。 
+	
+	\newpar We dare not tempt them with weakness. For only when our arms are sufficient beyond doubt can we be certain beyond doubt that they will never be employed.
+	
+	我们不敢以怯弱来引诱他们。 因为只有当我们毫无疑问地拥有足够的军备，我们才能毫无疑问地确信永远不会使用这些军备。 
+	
+	\newpar But neither can two great and powerful groups of nations take comfort from our present course—both sides overburdened by the cost of modern weapons, both rightly alarmed by the steady spread of the deadly atom, yet both racing to alter that uncertain balance of terror that stays the hand of mankind's final war.
+	
+	但是，这两个强大的国家集团都无法从目前所走的道路中得到安慰—发展现代武器所需的费用使双方负担过重，致命的原子武器的不断扩散理所当然使双方忧心忡忡。 但是，双方却争着改变那制止人类发动最后战争的不稳定的恐怖均势。 
+	
+	\newpar So let us begin anew—remembering on both sides that civility is not a sign of weakness, and sincerity is always subject to proof. Let us never negotiate out of fear. But let us never fear to negotiate.
+	
+	因此让我们双方重新开始—双方都要牢记，礼貌并不意味着怯弱，诚意永远有待于验证。 让我们决不要由于畏惧而谈判。 但我们决不能畏惧谈判。 
+	
+	\newpar Let both sides explore what problems unite us instead of belaboring those problems which divide us.
+	
+	让双方都来探讨使我们团结起来的问题，而不要纠缠那些使我们分裂的问题。 
+	
+	\newpar Let both sides, for the first time, formulate serious and precise proposals for the inspection and control of arms—and bring the absolute power to destroy other nations under the absolute control of all nations.
+	
+	让双方首次为军备检查和军备控制制订认真而又明确的提案，把毁灭他国的绝对力量置于所有国家的绝对控制之下。 
+	
+	\newpar Let both sides seek to invoke the wonders of science instead of its terrors. Together let us explore the stars, conquer the deserts, eradicate disease, tap the ocean depths, and encourage the arts and commerce.
+	
+	让双方寻求利用科学的神奇力量，而不是激发科学的恐怖因素。 让我们一起探索星球，征服沙漠，根除疾患，开发深海，并鼓励艺术和商业的发展。 
+	
+	\newpar Let both sides unite to heed in all corners of the earth the command of Isaiah—to ``undo the heavy burdens . .. and to let the oppressed go free.''
+	
+	让双方团结起来，在全世界各个角落倾听以赛亚的训令—``卸下沉重的负担，让被欺压者得到自由。 ''
+	
+	\newpar And if a beachhead of cooperation may push back the jungle of suspicion, let both sides join in creating a new endeavor, not a new balance of power, but a new world of law, where the strong are just and the weak secure and the peace preserved.
+	
+	如果合作的滩头阵地能逼退猜忌的丛林，那么就让双方共同作一次新的努力—不是建立一种新的均势，而是创造一个新的法治世界，在这个世界中，强者公正，弱者安全，和平将得到维护。 
+	
+	\newpar All this will not be finished in the first 100 days. Nor will it be finished in the first 1, 000 days, nor in the life of this Administration, nor even perhaps in our lifetime on this planet. But let us begin.
+	
+	所有这一切不可能在今后一百天内完成，也不可能在今后一千天或者在本届政府任期内完成，甚至也许不可能在我们的有生之年内完成。 但是，让我们开始吧。 
+	
+	\newpar In your hands, my fellow citizens, more than in mine, will rest the final success or failure of our course. Since this country was founded, each generation of Americans has been summoned to give testimony to its national loyalty. The graves of young Americans who answered the call to service surround the globe.
+	
+	同胞们，我们方针的最终成败与其说掌握在我手中，不如说掌握在你们手中。 自从我国建立以来，每一代美国人都曾受到召唤去证明他们对国家的忠诚。 响应召唤而献身的美国青年的坟墓遍及全球。 
+	
+	\newpar Now the trumpet summons us again—not as a call to bear arms, though arms we need; not as a call to battle, though embattled we are—but a call to bear the burden of a long twilight struggle, year in and year out, ``rejoicing in hope, patient in tribulation''—a struggle against the common enemies of man: tyranny, poverty, disease, and war itself.
+	
+	现在，号角已再次吹响-不是召唤我们拿起武器，虽然我们需要武器。 不是召唤我们去作战，虽然我们严阵以待。 它召唤我们为迎接黎明而肩负起慢长斗争的重任，年复一年，``从希望中得到欢乐，在磨难中保持耐性，''对付人类共同的敌人-专制、贫困、疾病和战争本身。  Can we forge against these enemies a grand and global alliance, North and South, East and West, that can assure a more fruitful life for all mankind? Will you join in that historic effort?为反对这些敌人，确保人类更为丰裕的生活，我们能够组成一个包括东西南北各方的全球大联盟吗?你们愿意参加这一历史性的努力吗?
+	
+	\newpar In the long history of the world, only a few generations have been granted the role of defending freedom in its hour of maximum danger. I do not shrink from this responsibility—I welcome it. I do not believe that any of us would exchange places with any other people or any other generation. The energy, the faith, the devotion which we bring to this endeavor will light our country and all who serve it—and the glow from that fire can truly light the world.
+	
+	在漫长的世界历史中，只有少数几代人在自由处于最危急的时刻被赋予保卫自由的责任。 在这一责任面前，我绝不会退缩，我欢迎它。 我不相信我们中间有人想同其他人或其他时代的人交换位置。 我们为这一努力所奉献的精力、信念和忠诚，将照亮我们的国家和所有为国效劳的人，而这火焰发出的光芒定能照亮全世界。 
+	
+	\newpar And so, my fellow Americans: ask not what your country can do for you—ask what you can do for your country.
+	
+	因此，美国同胞们，不要问国家能为你们做些什么，而要问你们能为国家做些什么。 
+	
+	\newpar My fellow citizens of the world: ask not what America will do for you, but what together we can do for the freedom of man.
+	
+	全世界的公民们，不要问美国将为你们做些什么，些什么。 而要问我们能共同为人类的自由做
+	
+	\newpar Finally, whether you are citizens of America or citizens of the world, ask of us the same high standards of strength and sacrifice which we ask of you. With a good conscience our only sure reward, with history the final judge of our deeds, let us go forth to lead the land we love, asking His blessing and His help, but knowing that here on earth God's work must truly be our own.
+	
+	最后，不论你们是美国公民还是其他国家的公民，请用我们所要求于你们的力量和牺牲的高标准来要求我们。 问心无愧是我们唯一可靠的奖赏，历史是我们行动的最终裁判，让我们走向前去，引导我们所热爱的国家。 我们祈求上帝的福佑和帮助，但我们知道，上帝在尘世的工作必定是我们自己的工作。 
+	
+	\section{the poetry of architecture}
+	
+	\setcounter{numpar}{0}
+	
+	\newpar The science of Architecture, followed out to its full extent, is one of the noblest of those which have reference only to the creations of human minds. It is not merely a science of the rule and compass, it does not consist only in the observation of just rule or of fair proportion; it is , or ought to be, a science of feeling more than of rule, a majesty of a building depend upon its pleasing certain prejudices of the eye, than upon its rousing certain trains of meditation in the mind, it will show in a moment how many intricate question of feeling are involved in the raising of an edifice; it will convince us of the truth of proposition, which might at first have appeared startling, that no man can be an architect who is not a metaphysician.
+	
+	建筑科学，如果得以充分体现的话，是只与人类心智创造有关的科学中最高贵的科学之一。 它不仅仅是尺子与圆规的科学，不仅仅需要遵守恰当的规则或合适的比例，它是或者应该是，一门重感情胜过于规则的科学，它更多的是服务于心灵，而非眼睛。 如果我们明白，一座建筑的美和雄伟，很大程度上取决于它能引发心灵的一系列沉思，而非来自于它能满足视觉上的某种偏爱，我们很快就会发现，一座建筑的兴建会涉及多少错综复杂的情感问题。 我们会因此而相信一个乍然一听不无惊人的论点，那就是，一个人如果不是玄学家，就无法成为建筑师。 
+	
+	\newpar To the illustration of the department of this noble science which may be designated The Poetry of Architecture, this and some future articles will be dedicated. It is this peculiarity of the art which constitutes its nationality;And it will be found as interesting as it is useful, to trace in the distinctive characters of the architecture of nations, not only its adaptation to the situation and climate in which it has arisen, but its strong similarity to, and connection with, the prevailing turn of mind by which the nation who first employed it is distinguished.
+	
+	对这一高尚科学进行说明的文本及今后要写的一些文章都将收入进我暂命名为《建筑之诗意》一书中。 正是这一艺术特性构成了它的民族性。 建筑不仅与其周围的环境和气候相适应，也与率先采用这种风格的民族的主流性情极其相似，密切关联，这些都可以从各民族的建筑特征中得以追溯，我们会发现，这种追溯既有益，亦有趣。 
+	
+	\newpar I consider the task I have imposed upon myself the more necessary, because this department of the science, perhaps regarded by some who have no ideas beyond stone and mortar as chimerical, and by others who think nothing necessary but truth and proportion as useless, is at a miserably low ebb in England. And what is the consequence?We have Corinthian columns placed beside pilasters of no order at all, surmounted by monstrosified pepper-boxes, Gothic in form and Grecian in detail, in a building nominally and peculiarly ``National''; we have Swiss cottages, falsely and calumniously so entitled, dropped in the brick-fields round the metropolis; and we have staring square-windowed, flat-roofed gentlemen’s seat, of the lath and plaster, mock-magnificent, Regent’t park description, rising on the woody promontories of Derwent Water.
+	
+	在我看来，赋予自己这项任务显得尤为重要，因为这门科学在英国正处于可悲的低谷之中：在那些只知石头和砂浆的人看来，它是虚妄幻想；在那些满脑袋只有事实和比例的人看来，它毫无用处。 那么结果是什么呢？我们看到科林斯式的柱子竖立在杂乱无章的壁柱旁边，上面是怪异的胡椒罐式的塔顶，形式上是哥特式的，细节上是希腊式的，这种建筑美其名曰别具``民族特色''；我们看到所谓的``瑞士小屋''散落在周围的一片砖砌的房子中实在是糟践了这一名称；我们看到那些平顶、有着显眼的方窗，用条板和石灰建造而成的乡绅别墅，它们仿照摄政王公园的样式，冒充宏伟的气势，耸立在德文特湖林木丛生的岬角上。 
+	
+	\newpar How deeply is it to be regretted, how much is it to be wondered at, that, in a country whose school of painting, though degraded by its system of meretricious coloring, and disgraced by hosts of would-be imitators of inimitable individuals, is yet raised by the distinguished talent of those individuals to a place of well-deserved honor, and the studios of whose sculptors are filled with designs of the most pure simplicity, and most perfect animation; the school of architecture should be so miserably debased!
+	
+	多么令人惋惜，多么令人惊异啊。 在这个国家，绘画学派虽然受到华而不实的着色方法的损害，并因成群试图东施效颦的模仿者而蒙羞，但在那些天分超群的画家的带动下，绘画享受着当之无愧的荣耀，雕塑家的工作室里随处可见最朴素却最富有生气的设计。  而建筑界竟会堕落到如此悲惨的境地！
+	
+	\newpar There are, however, many reasons for a fact so lamentable. In the first place, the patrons of architecture (I am speaking of all classes of buildings, from the lowest to the highest) are a more numerous and less capable class than those of painting There, the power is generally diffused. Every citizen may box himself up in as barbarous a tenement as suits his taste or inclination;The architect is his vassal, and must permit him not only to criticize, but to perpetrate. The palace or the nobleman’s seat may be raised in good taste, and become the admiration of a nation; but the influence of their owner is terminated by the boundary of his estate: he has no command over the adjacent scenery, And the possessor of every 30 acres around him has him at his mercy. The streets of our cities are examples of the effects of this clashing of different tastes; and they are either remarkable for the utter absence of all attempt at embellishment, or disgraced by every variety of abomination
+	
+	不过，现实之所以令人惋惜，原因是多方面的。 首先，建筑（我指的是所有等级的建筑，从最低等级到最高等级）的出资人，相比于绘画的赞助者来说，人数更庞大，能力却相形见绌。 在建筑领域，权利总体上是分散的。 每个公民可以按照自己的品味或爱好，住进粗鄙的房屋里。 建筑师是他的仆从，不仅必须听任他批评，还得容忍他胡作非为。 宫殿或贵族的宅邸也许能建出好品味，可以成为举国欣赏的对象，但这些建筑的主人的影响力到了地产的边界便中断了：他无法控制周边的景观。 他住宅周围的人，只要拥有30英亩土地，就能对他随意摆布。 我们的城市街道就体现了不同品位相互冲突的结果：他们或是因为毫无装饰之企图而引人注目，或是因为布满各种面目可憎的建筑而有失脸面。 。 。 。 。 。 
+	
+	\newpar I shall attempt, therefore, to endeavor to illustrate the principle from the neglect of which these abuses have arisen; That of unity of feeling, the basis of all grace, the essence of all beauty. We shall consider the architecture of nations as it is influenced by their feelings and manners, as it is connected with the scenery in which it is found, and with the skies under which it was erected;We shall be led as much to the street and the cottage as to the temple and the tower;And shall be more interested in buildings raised by feeling, than in those corrected by rule. We shall commence with the lower class of edifices, proceeding from the roadside to the village, and from the village to the city; and, if we succeed in directing the attention of a single individual more directly to this most interesting department of the science of architecture, we shall not have written in vain.
+	
+	因此，我要尽力尝试对建筑原则进行阐释。 正是由于漠视了原则，才会产生这些恶果。 建筑的原则是感情的统一，这是所有优雅的基础、所有美得本质。 当我们考察民族建筑时，应该考虑到它受到了人类情感和风俗的影响，它关乎周围的景致，关乎其下的那片天空。 我们不仅应该考察殿堂与高塔，也要考察街道和村舍。 我们应该将兴趣更多的投向用感情搭建而成的建筑，而不是用规则制定出来的建筑。 我们应该从建筑的低级层次开始，从路边到村庄，再从村庄到城市；如果我们能够成功地进行引导，哪怕只有一个人为此更加直接的注意到建筑学中这最为有趣的领域，我们就没有白费笔墨。 
+	
+	\newpar The beauty industry美容业
+	
+	\newpar it is a success in so far as more women retain their youthful appearance to a greater age than in the past. ''old ladies '' are already becoming rare. In a few years, we may well believe, they will be extinct. White hair and wrinkles, a bent back and hollow cheeks will come to be regarded as medievally old-fashioned. The crone of the future will be golden, curly and cherry-lipped, neat-ankled and slender. The Portrait of the Artist’s Mother will come to be almost indistinguishable, at future picture shows, from the Portrait of the Artist’s Daughter. This desirable consummation will be due in part to skin foods and injections of paraffin wax, facial surgery, mud baths, and paint, in part to improved health, due in its turnto a more rational mode of life. Ugliness is one of the symptoms of disease, beauty of heath. In so far as the campaign for more beauty is also a campaign for more health, it is admirable and, up to a point, genuinely successful. Beauty that is merely the artificial shadow of these symptoms of health is intrinsically of poorer quality than the genuine article. Still, it is a sufficiently good imitation to be sometimes mistakable for the real thing. The apparatus for mimicking the symptoms of health is now within the reach of every moderately prosperous person; the knowledge of the way in which real health can be achieved is growing, and will in time, no doubt, be universally acted upon. When that happy moment comes, will every woman be beautiful—as beautiful, at any rate, as the natural shape of her features, with or without surgical and chemical aid permits?
+	
+	越来越多的女性能更长久的保持青春的容貌，和过去相比，这的确是一种成就。 ``老太太''已经很少见了。 我们有理由相信，几年以后她们将彻底销声匿迹。 人们会把白发和皱纹、弯曲的背部和凹陷的双颊视为中世纪的过时风尚。 未来的老妇人会拥有卷曲的金发、樱红的嘴唇、光洁的脚蹂、苗条的身材。 在未来的画展中，人们将难以分辨哪一幅肖像是艺术家的母亲，哪一幅是艺术家的女儿。 这种可人心意的成就，部分可以归功于护肤品、石蜡注射、面部整形、泥浴和化妆，部分可以归功于由于更为理性的生活方式而改善的健康状况。 丑陋是疾病的症状之一，美丽则是健康的特征。 鉴于追求美丽也是追求健康，这种努力值得赞许，一定程度上也真正获得了成功。 模仿健康的外壳，制造人为的假象，这种美丽和真实存在相比，本质上要略胜一筹。 不过，作为模仿，它相当出色，有时足以乱真。 如今，每个中等富裕的人都买得起相关装备以妆扮出健康的样子，如何真正获得健康的知识也在日益增长，并且无疑会得到适时而全面的推广。 当那个幸福的时刻到来的时候，每一位女性是不是都会美丽动人——不管是否用了整形手术、化学试剂，女性是不是能够发挥出天生的丽质？
+	
+	\newpar The answer is emphatically: no. for real beauty is as much an affair of the inner as of the outer self. The beauty of a porcelain jar is a matter of shape, of color, of surface texture. The jar may be empty or tenanted, by spiders, full of honey or stinking slime—it makes no difference to its beauty or ugliness. But a woman is alive, and her beauty is therefore not skin deep. The surface of the human vessel is affected by the nature of its spiritual contents. I have seen women who, by the standards of a connoisseur of porcelain, were ravishingly lovely. Their shape, their color, their surface texture were perfect. And yet they were not beautiful. For the lovely vase was either empty or filled with some corruption. Spiritual emptiness or ugliness shows through. And conversely, there is an interior light that can transfigure forms that the pure aesthetician would regard as imperfect or downright ugly.
+	
+	答案是斩钉截铁的：``不''。 真正的美丽，事关外在的自我，同样也事关内在的自我。 瓷瓶的美丽取决于它的形状、颜色和表面质地。 饼子可以是空的，也可以由蜘蛛入住。 可以装满蜂蜜，也可以装满散发恶臭的烂泥，这一切都影响不到瓷瓶的丑或美。 但是女性是活生生的，因此她的美丽就不仅仅是表面的。 身体这具容器的外表不会受到精神内涵的影响。 我见过一些女性，按照鉴赏家欣赏瓷瓶的标准，她们相当美丽可爱。 体型、肤色、肤质样样完美无瑕。 但是，她们并不美丽。 因为这可爱的花瓶要么是空空如也，要么装满堕落，泄露出了精神的空虚与丑陋。 相反，在纯碎的审美家看来不算完美甚至是丑陋不堪的外形，可以在心灵之光的作用下变得美丽。 
+	
+	\newpar There are numerous forms of psychological ugliness. There is an ugliness of stupidity, for example, of unawareness(distressingly common among pretty women. ) An ugliness also of greed, of lasciviousness, of avarice. All the deadly sins, indeed, have their own peculiar negation of beauty. On the pretty faces of those especially who are trying to have a continuous''good time'', one sees very often a kind of bored sullenness that runs all their charm„
+	
+	心理上的丑陋有众多不同的形式。 有一种丑陋是愚蠢，比如愚蠢到懵懂无知（这是漂亮女性令人苦恼的通病）同样，贪婪、淫欲、财迷心窍也是丑陋。 所有致命的罪过以各自特有的方式否决了美丽。 尤其是那些想要不断享受``美好时光''的人的娇艳面庞上，人们常常能够看到那种百无聊奈的阴郁神情，这神情将她们的魅力全部抹杀。 
+	
+	\newpar Still commoner and no less repellent is the hardness which spoils so many pretty faces. Often , it is true, this air of hardness is due not to psychological causes, but to the contemporary habit of over-painting. In Paris, where this over-painting is most pronounced, many women have ceased to look human at all. Whitewashed and ruddled, they seem to be wearing marks. One must look closely to discover the soft and living face beneath. But often the face is not soft, often it turns out to be imperfectly alive. The hardness and deadness are from within. They are the outward and visible signs of some emotional or instinctive disharmony, accepted as a chronic condition of being.
+	
+	更为常见而且同样令人反感的还有冷漠，它令多少美丽的容颜为之减色。 实际上，这种冷漠的神态往往不是心理因素造成的，而是因为人们在现在时代养成了浓妆艳抹的习惯，在巴黎，浓妆艳抹的现象最为明显，许多女性看起来根本就不像是人。 扑满白粉又抹上胭脂以后，她们像是戴上了面具。 人们需要仔细地看，才能发现下面那柔和而鲜活的脸庞。 不过，这脸庞往往并不柔和，看起来缺乏活力，从内心散发出默然的沉沉死气。 它们是情绪或者天性和谐的外在显性表征，是公认的慢性的病态存在。 
+	
+	\newpar So long as such disharmonies continue to exist, so long as there is good reason for sullen boredom, so long as human begins allow themselves to be possessed and hagridden by monomaniacal vices, the cult of beauty is destined to be ineffectual. Successful in prolonging the appearance of youth, or realizing or simulating the symptoms of health, the campaign inspired by the cult remains fundamentally a failure. Its operations do not touch the deepest source of beauty—the experiencing soul. It is not by improving skin foods and point rollers, by cheapening health motors and electrical hair-removers, that the human race will be made beautiful; it is not even by improving health. All men and women will be beautiful only when the social arrangements give to every one of them an opportunity to live completely and harmoniously, when there is no environmental incentive and no hereditary tendency toward monomaniacal vice. In other words, all men and women will never be beautiful. But there might easily be fewer ugly human beings in the world than there are at present. We must be content with moderate hopes.
+	
+	只要这样的不和谐继续存在，只要确实有温怒和厌倦的理由，只要人类听任偏执罪恶的支配和折磨，对美好的时尚观念将注定不起作用。 这种时尚观念所激发的行为成功延长了青春的容貌，实现或模仿了健康的外表，但从根本上说，这些举措都是失败的。 它的运作没有接触到美得最深的根源——感受中的灵魂。 人类想要变美，无法通过改良护肤品和美容器材，无法通过越来越便宜的健身器和电动除毛器，甚至无法通过提高健康水准。 只有当社会给每一个成员机会，让他们完整而和谐地生活，只有当偏执的邪恶丧失了诱发的环境，拜托了遗传的倾向，所有的男人和女人才能实现美丽。 换言之，不可能所有的男人和女人都美丽，但是和现在相比，这个世界上无疑能够少一些丑陋的人。 我们应该满足于这微薄的祈盼。 
+	
+	\section{ Thinking like a mountain}
+	\setcounter{numpar}{0}
+	
+	\newpar A deep chesty bawl echoes from rimrock to rimrock, rolls down the mountain, and fades into the blackness of the night. It is an outburst of wild defiant sorrow, an of contempt for all the adversities of the world.
+	
+	一个发自肺腑的低沉而又尖厉的号叫在悬崖之间回荡，最后划过大山，消逝在远方深沉的夜色中。 这声号叫爆发出一种充满野性和反抗的哀愁，爆发出对世界上一切逆境的蔑视。 
+	
+	\newpar Every living thing(and perhaps many a dead one as well)pays heed to that call. To the deer it is a reminder of the way of flesh, to the pine a forecast of midnight scuffles and of blood upon the snow, to the coyote a promise of gleaning to come, to the cowman a thread of red ink at the bank, to the hunter a challenge of fang against bullet. Yet behind these obvious and immediate hopes and fears there lies a deeper meaning, known only to the mountain itself. Only the mountain has lived long enough to listen objectively to the howl of a wolf.
+	
+	大山中所有的生物(可能也包括许多死去的生物)都侧耳倾听着这声号叫。 对鹿而言，它提醒了众生之道，意味着死亡近在咫尺。 对松树而言，它预见了午夜的混战和雪上的血迹。 对郊狼而言，它意味着有残肉可食的许诺;对牧牛者而言，它意味着银行透支的威胁;对猎人而言，它意味着撩牙对子弹的挑战。 然而，在这些比较容易察觉的希望与恐惧的背后，号叫还隐藏着更深层的含义，但是只有大山自己才能领会。 因为只有大山才有沧海桑田的岁月与见识，能够客观地聆听狼的号叫所隐藏的深意。 
+	
+	\newpar Those unable to decipher the hidden meaning know nevertheless that it is there, for it is felt in all wolf country, and distinguishes that country from all other land. It tingles in the spine of all who hear wolves by night, or who scan their tracks by day. Ever without sight or sound of wolf, it is implicit in a hundred small events:the midnight whinny of pack horse, the rattle of rolling rocks, the bound of a fleeing deer, the way shadows lie under the spruces. Only the ineducable tyro can fail to sense the presence or absence of wolves, or the fact that mountains have a secret opinion about them. 
+	
+	而那些无法领会其中深意的，也能感觉到它的存在，而且在所有的狼出没的地方都能感受得到。 这种异样的感觉也使那些地区与其他地区区别开来。 所有在夜晚听到狼号或是白天看到狼的踪迹的人，都会不自觉地背部发毛，脊部发冷。 即使没有听到狼号或是看到狼迹，也可以从许多异样的情景中感知一二。 比如说一只驮马半夜的嘶叫、石头刺耳的滚动声、逃亡之鹿奔跑的慌张以及云杉树下诡异的阴影等。 只有那些不堪造就的新手才无法感知狼的存在，也无法理解只有大山才能体会的那种深奥。 
+	
+	\newpar My own conviction on this score dates from the day I saw a wolf die. Were eating lunch on a high rimrock, at the foot of which a turbulent river elbowed its way. We saw what we thought was a doe fording the torrent, her breast awash in white water. When she climbed the bank toward us and shook out her tail, we realized our error:it was a wolf. A half dozen others, evidently grown pups, sprang from the willows and all joined in a welcoming melee of wagging tails and playful maulings. What was literally a pile of wolves writhed and tumbled in the center of a open flat at the foot of our rimrock.
+	
+	我对上面的说法深信不疑，是源自于我曾亲眼看到一只狼死去。 那日，我们正在一个高高的悬崖上吃午餐，悬崖脚下有一条汹涌澎湃的河流。 我们看到了一个东西在急流中挣扎跋涉，胸部浸在白色的水花中。 我们原以为是只鹿，但等它朝我们的方向爬上岸，抖落身上的河水时，我们才发现原来它是只狼。 这时，六只显然已经长大的狼息欢快地摇着尾巴，相互打斗嬉闹着从柳树丛中跳跃出来，以示它们的欢迎。 的的确确，在我们所处的山崖脚下的空地上，我们看到一群狼在那里翻滚打闹。 
+	
+	\newpar In those days we had never heard of passing up a chance to kill a wolf. In a second we were pumping lead into the pack, but with more excitement than accuracy:how to aim a steep downhill shot is always confusing. When our riles were empty, the old wolf was down, and a pup was dragging a leg into impassable slide-rocks.
+	
+	在那段日子里，没有人会错过射杀狼的机会。 很快，一发发子弹射入狼群。 但是由于我们太兴奋了，再加上我们都不知道怎样才能瞄准向陡峭的山下射击，所以我们的枪法都不是很准。 结果在我们的子弹消耗殆尽时，只有那只老狼倒下了，还有一只小狼拖着受伤的腿躲进了山崩造成的人们无法通行的岩石堆。 
+	
+	\newpar We reached the old wolf in time to watch a fierce green fire dying in her eyes. I realized then, and have known her since, that there was something new to me in those eyes-something known only to her and to the mountain. I was young then, and full of trigger-itch;I thought that because fewer wolves meant more deer, that no wolves would mean a hunters’ paradise. But after seeing the green fire die, I sensed that neither the wolf nor the mountain agreed with such a view.
+	
+	我们接近那只狼的时候，它眼中那绿色的充满仇恨的目光还没有完全消逝。 正是在那时，并且从那时起，我意识到了，在那双眼睛里，有我未曾领会的道理—某种只有狼和大山才知晓的道理。 但是当时我太年轻气盛，总有扣动扳机的冲动。 我认为狼群的减少就意味着鹿群的增加。 而狼群的消失则意味着猎人天堂的到来。 但是自从我看到那只老狼眼中渐渐消逝的仇恨的绿光时，我才意识到，无论是狼还是大山，肯定不会认同我这样一种看法。 
+	
+	\newpar Since then I have lived to see state after state extirpate its wolves. I have watched the face of many a newly wolfless mountain, and seen the south-facing slopes wrinkle with a maze of new deer trails. I have seen every edible bush and seeding browsed, first to anemic desuetude, and then to death. I have seen every edible tree defoliated to the height of a saddle horn. Such a mountain looks as if someone had given God a new a pruning shears, and forbiddien Him all other exercise. In the end the starved bones of the hoped-for der herd, dead of its own too-much, bleach with the bones of the dead sage, or molder under the high-lined junipers. 
+	
+	自那以后，我看到各州都在相继扑灭自己的狼群。 我眼睁睁看到了一座座刚刚扑灭狼群的大山的面貌;看到了山的南坡被鹿群踩出的纷乱的小径;看到了所有能吃的灌木、甚至是细枝嫩芽都被啃光，而这些植物因而也很快衰弱不振，不久便告死亡;我也看到了所有能吃的树叶，在马鞍高度以下的部位全都被吃得精光。 看到这样的一座山，你会感觉是有人给了上帝一把剪刀，让他整夭除了剪除树木以外，什么都不许做。 后来，鹿群由于数量过于庞大，再加上草木供不应求，便大批量地饿死了。 (此文来自袁勇兵博客)它们的白骨与死去的鼠尾草一起变白，或是在高大的杜松树下腐朽。 
+	
+	\newpar I now suspect that just as a deer herd lives in mortal fear of its wolves, so does a mountain live in mortal fear of its deer. And perhaps with better cause, for while a buck pulled down by wolves can be replaced in two or three years, a range pulled down by too many fail of replacement in as many decades. 
+	
+	现在我想，就像鹿群生活在狼群的阴影和恐怖中一样，大山也生活在鹿群的阴影和恐怖中，也许这种恐怖有着更充分的理由。 因为一只鹿被狼吃掉，两三年后很快就会有新的小鹿出生繁衍，但是，一旦一座大山被鹿群毁灭，恐怕几十年也无法恢复原貌。 
+	
+	\newpar So also with cows. The cowman who clear his range of wolves does not realize that he is taking over the wolf’s job of trimming the herd to fit the range. He has not learned to think like a mountain. Hence we have dust bowls, and river washing the future into the sea.
+	
+	牛也是这样，牧牛人在清除狼群的时候，没有意识到其实他正在做着本质上如同狼吃牛一样的工作—削减牛群数量以适应山的承受能力。 牧牛人还没有学会像大山那样去思考。 其结果，沙尘暴出现了，河流将我们的未来无情地冲入大海。 
+	
+	\newpar We all strive for safety, prosperity, comfort, long life, and dullness. The deer strives with his supple legs, the cowman with trap and poison, the statesman with pen, the most of us with machines, votes, and dollars, but it all comes to the same thing:peace in our time. A measure of success in this is all well enough, and perhaps is a requisite to objective thinking, but too much safety seems to yield only danger in the long run. Perhaps this is behind Thoreau’s dictum；In wildness is the salvation of the world. Perhaps this is the hidden meaning in the howl of the wolf, long known among mountains , but seldom perceived among men. 
+	
+	我们都在努力追求安全、繁荣、舒适、长寿和徽散的生活。 鹿用它柔韧的双腿去追求;牧牛人用陷阱和毒药去追求;政治家用口诛笔伐去追求;大多数人则是用机器、选票和金钱去追求。 但不管形式如何迥异，目的只有一个，那就是追求时代的和平。 在这些方面取得某种程度的成功是件好事，客观地说也是必要的。 但是从长远来看，太多的安全似乎只能适得其反。 也许这正验证了梭罗的一句话，``野地里蕴含着对于世界的救赎''。 也许，这就是隐藏在狼的哀号背后的深层含义。 大山早已明白，而人类却知之甚少。 
+	
+	
+	
+	\section{ How Mass Media affect our perception of reality}
+	\setcounter{numpar}{0}
+	
+	\newpar Just before September 11th , 2001, The U. S. mass media were focused on sports, the lives of various celebrities, and a Congressman's relationship with a missing staff member. Then everything changed. A skyscraper complex, militant group, and distant country suddenly dominated mass media as people sought to understand what had occurred, what to make of passenger planes turned into missiles, and who to trust for credible information on terrorism. 
+	
+	在 2001 年 9 月 11 日之前，美国媒体的主要焦点是体育赛事，名人轶事，以及某个国会议员与一个失踪职员的关系等。 然而，9``11 之后一切都发生了改变。 一幢摩天大楼，一个武装组织，以及一个遥远的国家突然之间主宰了大众传媒。  这是因为美国民众迫切想要弄明白: 到底发生了什么事， 是什么让载人的客机变成了导弹， 谁提供的有关恐怖主义的情报才是真 实可信的。 
+	
+	\newpar That dramatic shift in media emphasis is an excellent recent example of how mass media help to shape our shifting concerns and beliefs. Why could we have been so concerned about celebrity lifestyles one week and so unconcerned the next? Why such a prior general disinterest in an already notorious terrorist group, and in festering Middle East countries and cultures? Why the sudden media shift from a Regularly-Criticized-President to an Esteemed-Leader-President?
+	
+	这次媒体焦点的巨大转变是近期的一个好例子，它展示了大众传媒如何帮助我们形成迅速变化的关注点和信念。 为什么我们在这一周里对名人的生活方式如此关注， 而到了下一周却又对此变得漠不关心?为什么公众以前对一个早已臭名昭著的恐怖组织、对日益衰败的中东国家和文化都普遍缺乏兴趣?为什么媒体以前对我们的总统总是批评，而突然之间又将其誉为一位令人尊敬的、勇于承担责任的总统。 
+	
+	\newpar Dramatic advances in mass communication and transportation during the past 50 years have truly created a global village, a mass society. Things occurring anywhere are now quickly known everywhere. Mass media both overwhelm us with information, and help us to sort it out.
+	
+	大众传媒和交通运输在过去 50 年里迅猛发展，把世界真真切切地变成了一个地球村，一 个大众社会。 如今，任何地方发生的事件都会迅速地传播到世界的每一个角落。 大众传媒不 仅用铺天盖地的信息将我们淹没，也帮助我们对这些信息加以分类整理。 4. Mass media seek a broad audience for a typically narrow (and often biased) message that's typically embedded in entertainment or useful information/opinion. Mass media communication is expensive, so it's funded through participant admissions/subscriptions and contributions, or through  sponsorships and advertising (or a combination of these funding sources). It thus must provide something sufficiently valuable to its potential audience to gain that necessary financial support.
+	
+	大众传媒为典型的受众面非常狭小的(通常带有偏见)讯息寻求广泛的受众群体，这类讯息通常嵌于娱乐或有用的信息/观点中。 大众传媒的成本极其昂贵，所以它通过加盟许可/订阅和捐款来获取资金，或者通过赞助和广告(或者多管齐下)来获取资金。 因此，它必须为潜在的受众提供足够有价值的讯息，以此获得必要的资金支持。 
+	
+	\newpar The mass media have a ``slow news day'' problem. They have pages and time to fill, even when events are mundane. A common solution at such times is to focus on sports and the lives of celebrities (people who are well known for their well-knownness, as Andy Warhol once put it), or to take something relatively trivial and expand it into something important. Think back to the pre-September 11 focus.
+	
+	大众传媒总会遇到这样一个问题—某一天没有任何值得报道的新闻。 然而，即使这一天的 事件统统乏善可陈，媒体也得想法把版面填满，或把播出时间打发完。 当此类情况发生时， 通常的解决办法是将新闻报道的重点放在体育赛事和名人轶事上(如安迪• 沃霍尔所言:``名人因众所周知而有名'')，或者在某个比较琐碎的小事情大做文章，将其包装成重要的大事件。 回想 9``11 事件发生前的热点，正是如此。 
+	
+	\newpar Mass media encompass much more than print and electronic forms of  communication (such as magazines and television). Sporting events, churches, museums, theme parks, political campaigns, catalogs, and concerts are also forms of mass media, although many people consider them to be something other than mass media.
+	
+	大众传媒并不局限于印刷媒介和电子通信媒介等形式(如杂志和电视)。  尽管许多人不认同， 但体育赛事、教堂、博物馆、主题公园、政治活动、目录单和音乐会也是大众传播的媒介形 式。 
+	
+	\newpar The U. S. Constitution underscores the importance of the open communication of information and opinion in our democratic society by granting considerable self-direction to the various forms of mass media. A marketplace mentality suggests that useful information and opinions will spread, and the useless will disappear. A free-speech society can thus tolerate of false information, stupidity, and vulgarity ----assuming them to be a   temporary irritant.
+	
+	美国宪法赋予各种形式的大众媒体极大的自主权， 以此来强调信息和想法的公开交流对民主社会的重要性。 从一种市场心态来看，有用的信息和想法将会得到传播，而无用的终将消 失。 因此，一个言论自由的社会能够容忍虚假信息、愚蠢和庸俗—假设这些东西仅会扰人一 时，不会长久。 
+	
+	\newpar Mass media are very competitive. Folks today have many options  about the TV and films they watch, the books and magazines they read, the cultural and religious institutions they attend. The challenge for a media program is to get and hold the attention of mass media shoppers -- who  are channel surfing, browsing at a bookstore, checking out various churches.
+	
+	大众传媒间的竞争很激烈。 今天的人们对于所看的电视和电影、所读的书籍和杂志、所参 加的文化和宗教机构都有很多的选择。  媒体面临的挑战是如何吸引并抓住大众传媒消费者的 注意力，他们正在来回调换频道，在书店翻阅书籍，在教堂之间穿梭。  
+	
+	\newpar In a stimulating competitive environment, a media program must   score quickly. Since you're still reading this column, the title and opening paragraph must have sufficiently caught your attention so you continued. Emotional arousal drives attention, which drives learning and conscious behavior - so it's important for mass media programmers to understand and present content that will emotionally arouse potential participants.
+	
+	在竞争激烈的环境下，一个媒体策划必须具备快速得分的能力。 既然你仍在阅读这个专栏 的文章，一定是文章的标题和开头充分吸引了你的注意力，这样你才会继续读下去。 调动情感能够激发注意力，进而激发学习和自觉行为。 因此，对大众传媒策划人来说，一件非常重 要的事就是了解并报道能够激发潜在受众情感的新闻事件。 
+	
+	
+	
+	\newpar Our basic biological challenge is to survive and get into the gene pool, so avoiding danger and taking advantage of opportunities for eating/shelter/mating are cognitively important. Events related to these needs are inherently emotionally arousing, and successful mass media programmers understand this.
+	
+	我们生理上的基本挑战是生存和繁衍后代，因此，躲避危险、利用各种机会来吃、住、 交配被认为是头等大事。 与这些需求相关的事件本身就能激发起人的情感。  成功的大众传媒 策划人都了解这一点。 
+	
+	\newpar People complain about the amount of violence, sexuality, and commercialism in mass media, but let's look at the issue from a TV programmer's perspective. Channel surfers will give a TV program only a few seconds before moving to the next channel, so programmers focus on content  sequences with a high probability for emotional arousal - and program content and commercials related to violence, sexuality, and food/shelter do attract and hold attention. Consider the recent media focus on terrorist violence, the Taliban treatment of women, the food/shelter problems now facing the families of those killed and Afghani refugees -- and the resultant widespread outpouring of anger and support. 
+	
+	人们抱怨大众传媒中充斥着大量的暴力、性和商业行为，但是让我们从一位电视编导的 角度来看待该问题。  浏览电视频道的观众关注一个电视节目的时间只有数秒钟， 然后就会转到另一个频道去。 因此，电视编导们关注于内容的顺序，尽可能地激发观众的情感—而与暴 力、性、食物/住房有关的节目和广告的确能吸引并抓住观众的注意力。 想想最近的新闻焦点: 恐怖主义的暴力，塔利班如何对待妇女，死亡人员家属及阿富汗难民所面临的食物住房问题—以及由此进发出的怒潮和大规模的声援行动。  
+	
+	\newpar Similarly, other forms of mass media, from churches to sporting events explicitly or implicitly include these attention-getters in their programming (consider hell-and-brimstone and sexual purity sermons and the appeal of church suppers; or football violence, cheerleaders, and drinks-and-chips). 
+	
+	同样，其他形式的大众媒体，不管是教会还是体育赛事，均或明里暗里地包含了这些吸 引眼球的东西(例如炼狱般的折磨、关于性纯洁的布道以及诱人的教会晚餐等。 或足球暴力、 啦啦队、饮料和炸薯条等)。  
+	
+	\newpar Mass media thus exploit areas of strong emotional arousal to help shape our knowledge and opinions - such as with our rapid media-driven  increase in knowledge of the terrorists and their victims. Osama bin Laden had previously been a peripheral media figure. The several thousands victims had been invisible office workers until many newspapers published a series of anecdotal obituaries of all of them. Police and firefighters across the country were suddenly elevated in esteem - as was New York's mayor, severely criticized prior to September 11. A nation already beset by a financial downturn had to become emotionally aroused to respond. Charities similarly use examples of a few individuals in desperate straits to encourage contributions for a much broader assistance program. 
+	
+	因此，大众传媒利用能够唤起强烈情感的信息领域来帮助我们构建知识、形成观点。 例 如，媒体的报道让我们短时间内对恐怖分子和受害者方面的知识急剧增加，而在此前，媒体对本• 拉登鲜有报道。 在许多报纸发布一系列带点轶事风格的讣告之前，那几千名受害者都只是些默默无名的上班族，不为我们所知。 和纽约市市长一样，全国的警察和消防队员突然 之间受到了前所未有的赞誉，而 9``11 之前，他们都曾备受苛责。 一个深受金融危机困扰的 国家必须将民众的情感调动起来以应对危机。  慈善机构同样会以少数几个身处绝境的个人为 例，鼓励人们为范围更广的援助项目捐款。  
+	
+	\newpar Given such manipulative potential over our affective processes, it's important to know who determines the content of mass media. A relatively  small number of large corporations control much of our nation's print and electronic media (newspapers, publishing houses, radio/TV stations, cable systems, etc. ). Further, a relatively small number of media stars reach vast audiences-- syndicated newspaper columnists and cartoonists, radio and TV talk show hosts, late night TV comedians. On the other hand,  most newspapers include editorial columnists who disagree with each other, and the Sunday morning political TV shows are characterized more by argument than agreement. A major media organization that defines itself too narrowly risks reaching a limited audience when they need a massive audience to survive - so this financial reality forces at least some balance in programming. 
+	
+	鉴于媒体具有操控我们的情感过程的潜力，知晓谁在决定大众传媒的内容非常重要。 为 数不多的几家大公司控制着我们国家大部分的印刷和电子媒体(报纸、出版社、广播电台/电 视台、有线电视系统等)。 此外，为数不多的一些媒体明星，例如辛迪加报业专栏作家和漫 画家、广播和电视谈话节目主持人、午夜电视喜剧演员，也影响着大量的观众。 另一方面， 大多数报纸的社论专栏作家们彼此间的意见都不一致， 周日上午的政治电视节目的特点是争论多于统一。 一个主要的媒体机构如果定位过于狭窄，它将会面临观众太少的风险，而要生 存下去就必须拥有大量的观众—因此，经济现实迫使其在编导过程中至少需要一定的平衡。 
+	
+	\newpar Magazines and radio stations are perhaps the most successful narrowly defined mass media formats - typically being upfront about seeking an audience who shares their narrow perspective (e. g. , Rolling Stone, Gourmet, Ms. , The Christian Century, Sports Illustrated - golden oldies, jazz, classical, rock music radio stations)。 
+	
+	在狭义的大众传媒形式中，. 杂志和广播电台或许是最成功的—其典型做法，是直接地迎合 那些与其旨趣相投的受众(例如， 《滚石》 、 《美食》 、 《女士》 、 《基督教世纪》 、 《体育画报》 、 金曲音乐台、爵士乐台、古典乐台、摇滚音乐台等)。  
+	
+	\newpar The Computer Age has revolutionized mass media. The Internet allows the universal inexpensive publication of ideas, whether it's an email message sent to everyone on one's list or a narrowly-defined website that's available to anyone. Desktop publication and advances in duplicating   technology have reduced the need for authors to go through a publisher. 
+	
+	计算机时代彻底改变了大众传媒。 互联网让所有人无需太多花费即可发布个人观点，无论是以电子邮件的形式送达邮件地址簿里的每一个人，还是发布到一个人人都可浏览的局域 网。 桌面出版和复印技术的发展使得作者无需通过出版商即可出版自己的作品。 
+	
+	\newpar So it's a cultural paradox. We're simultaneously experiencing the centralization of influence in corporate mass media and the rapid expansion of populist mass media. Both pose dangers and opportunities.
+	
+	因此，这就构成了一个文化悖论。 我们一方面在见证传媒业日趋集中的势头，而另一方 面又在经历着大众传媒向平民化方向迅猛发展的大潮。 这两者都蕴含着危险和机遇。 
+	
+	\section{ Marketing Across Cultures}
+	\setcounter{numpar}{0}
+	
+	\newpar Almost all of us have heard about General Motors trying to sell their Nova model in Latin America and finding out that ``no va'' in Spanish literally means ``it doesn’t go''. And of course, there was the famous first try of Coca Cola in China, when the translation of the soft drink’s name read ``bite the wax tadpole''.
+	
+	我们几乎都听说过这样一个销售案例:美国通用汽车公司试图在拉丁美洲销售他们的Nova车型，结果发现在西班牙语中，``no va'' 的字面意思是 ``它走不了''。 当然，同样有名的还有另外一个案例: 可口可乐第一次登陆中国市场时，这种软饮料的名字被译成 ``蛾蚌啃蜡''。  
+	
+	\newpar But cultural awareness in marketing is a lot more than careful translation. There are subtleties and nuances to every culture, and there are just plain tablls. Although most people wouldn’t be able to list the rules of their own culture, they certainly know when those rules are violated. Our own culture tendd to be ``invisible'' to us, while differences we run into when abroad strike as strange, funny or extrotic. So how much more difficult it to discern the unwritten rules of another country?
+	
+	但是市场营销中的文化意识却远远不只是小心谨慎的翻译而已。 每一种文化都有它的微妙和特别之处，同时还有一些直白的忌讳。 虽然大多数人都无法详尽地罗列出他们自己文化中的条条框框，但他们却肯定知道什么时候人们违背了他们的文化传统。 对我们来说，自己所属的文化往往是看不见的，但是，当我们身处异地时，我们碰到的文化差异却令我们感到古怪、有趣或奇特。 因此，要辨明另一国家不成文的规定到底有多么困难呢? 
+	
+	\newpar There is still no substitute for a visit to the target market. When in a foreign place, you’ll undoubtedly become aware of different aesthetica. What flavors, which colors, are used to attract buyers there? Foods you find unpalatable and decorations you find  garish have completely different effects on the natives. Your hosts might ask seemingly  rude  questions such as ``How old are you?'' and ``How much money do you make?'' Meals, schedules, transportation, and personal conveniences can't be taken for granted. Prices for the simplest purchases are subject to negotiation. You haven't figured out all the small coins, and you don't understand anyone's name. And it just doesn't smell like home.
+	
+	看来，去目标市场进行调查仍然是不二之选了。 当你身处异国他乡时，你就肯定会留意到审美观的差异。 在那里，到底哪些味道或颜色更容易吸引购买者?你觉得很难吃的东西或很艳俗的装饰品对当地人来说就完全是另一回事。 主人可能会问客人一些看似不礼貌的间题，如``你多大啦?''或``你赚多少钱啊?''饮食、日程表、交通、个人便利等等都不能想当然。 即便是购买最普通的物品，你也可以讨价还价。 你没弄清楚所有的硬币，你也不懂任何人名字的含意。 总之，一切都与在国内时不一样。  
+	
+	\newpar A visit is a golden opportunity to absorb the present-day culture. Every detail that differs  from your usual pattern is a clue to the nationals. But also remember that learning the basics of comportment in another culture, though very important in your relationships with  clients and contacts, isn't sufficient for planning a full marketing campaign. The simplest cultural differences  can strand the grandest plans.
+	
+	到目标市场走走也是吸收当今文化的黄金时机。 任何与你平时生活模式有所不同的细节都能透露出当地居民的行为方式。 但同样要记住的是，在培养和发展与客户或联系人的社会关系时，学会另一文化的规范行为举止虽然很重要，但这并不足以助你做一个全面的营销策划。 最简单的文化差异也能搁浅最宏伟的计划。 
+	
+	\newpar In Japan, for example, a major household products company spent many millions of dollars on a marketing campaign in advance of introducing its laundry detergent. Nevertheless, when the detergent was made available, sales were miniscule. In fact, few shops stocked the soap. Non-tariff trade barriers?  No, it was something much simpler. The typically US ``large, economy-sized'' boxes  were far too big and bulky for the tiny Japanese retail establishments. And Japanese housewives don't usually have cars——they walk to the stores and carry their purchases home, to very small living spaces.
+	
+	例如，在将其洗涤剂引入日本市场之前，一家大型的家用产品公司花了数百万美金进行了市场营销活动。 尽管如此，当他们的洗涤剂在日本上市时，销量却客客无几。 事实上，几乎没有商店储备这种肥皂。 是非关税贸易壁垒的缘故吗? 不是，真正的原因要简单得多。 典型的美国式经济大包装对于空间狭小的日本零售店来说俨然是 ``庞然大物''。 而且，日本的家庭主妇一般没有车，她们步行到商店，然后买了商品拎回家—个很小的处所。  
+	
+	\newpar Cultural factors influence consumer behavior. These factors include religion, superstation, family structure, cuisine, language and local history but estend to attitudes about such issues as government, work authority, age, environment, space and time, and male-female relationships. Finally, there is that difficult-to-define national sense of humor which often doesn't translate from one culture to another. Beyond concrete demographics, these attitudes are not as easy to circumscribe and pin down; besides, attitudes, even culturally ingrained ones, do change.
+	
+	不同的文化因素—不仅包括宗教、迷信、家庭结构、饮食、语言和当地的历史，还延伸到对待事物的各种观念如政府、工作、权威、年龄、环境、时空和男女关系—都会影响人们的购买行为。 最后，一种文化里的幽默感是很难界定的，而且这种幽默通常难以通过另一种文化领会或设释。 除了具体的人口统计数据之外，很难清楚地界定或确定这些观念;而且，即使是带上文化烙印的根深蒂固的各种观念也确确实实在改变。  
+	
+	\newpar The target language is easily determined, but beware of generalities. The Spanish language in Spain is not the same as in Latin America. And we've all heard about the 10, 000  spoken dialects in Chinese, but also realize that the ``old'' characters` are still used in Singapore, other nations and regions. These have largely been supplanted with ``simplified'' characters on China's mainland that are now, since reunification, being spread to Hong Kong SAR. Most Chinese under 40 years old on the mainland can't read the old-style writing.
+	
+	目标语很容易确定，但切忌笼统概括。 在西班牙使用的西班牙语与在拉丁美洲使用的西班牙语并不完全一样。 我们都听说过在汉语里大约有10, 000种口语方言，而且我们也都意识到新加坡、其他一些国家和地区还在使用繁体汉字。 但在中国大陆地区，繁体字已经基本上被简化字取代了。 自从香港回归以来，这一趋势也扩展到了香港特别行政区。 在大陆，大多数40岁以下的中国人已经不会读繁体字了。  
+	
+	\newpar Combine superstition and language for amplified effect. In China and Japan, the number four has the same pronunciation as the word that means ``death''. Consequently, a ``4'' in your company name or contact information might have a negative implication. The number eight, however, is considered lucky, and many products are named ``88'' or ``888''. Phone numbers with eights denote good fortune, and real estate with eights in the address is likely to sell more quickly—especially if the price ends in ``888''. These beliefs are so prevalent that hospitals in Hong Kong SAR were flooded with near-term pregnant mothers on August 8th, 1988 (8/8/88), demanding induced delivery or even Caesarian sections so their babies would have lucky birthdays. And 1988 was also the auspicious ``Year of the Dragon'' in the traditional Chinese calendar.
+	
+	如果你能够把迷信和语言结合起来，你就能增强效果。 在中国和日本，数字4与``死''谐音。 因此，公司名字或联系信息里的数字4会有一种负面的含义。 然而，数字8却被看作是一个幸运数字，于是有很多的产品名称都叫88或888。 有数字8的电话号码代表着好运。 地址里含有数字8的房产很可能会卖得更快，特别是当价格的尾数是``888''的时候。 这些数字迷信相当普遍，以致于在1988年8月8日(8/8/88)，香港的医院挤满了临产的孕妇，有的要求人工引产，有的甚至要求剖腹产。 这样，他们的小孩就可以有幸运的生日了。 . 而且，1988年也是农历中大吉大利的龙年。 
+	
+	\newpar In the United States, we’re used to competitive playing field in which we constantly compare ourselves, our companies, and our products. But in the EU and much of Asia, comparisons in advertising are not accepted or allowed. Declaring that one soft-drink tastes better than another or even that one automobile is more dependable than another could be met with distaste (or even legal action). For an EU campaign, it might be okay to tout the merits of your products, but not okay to use comparative methods common to a US campaign. In some locations, citizens tend to be much more humble and self-effacing than ``shoot-from-the-hip'' people in the United States. Many cultures will respond better to emphasis on company longevity and reputation.
+	
+	在美国，我们习惯于在竞技场上角逐，比较自身、公司和产品。 但是，在欧盟和大多数亚洲国家，广告里是不接受、也不允许有比较行为的。 . 如果宜称某种软饮料要比其他的软饮料口感更佳，或者某一种品牌的汽车比其他汽车更可靠，这可能会招人反感(甚至会被诉诸法律)。 欧盟的宣传活动，吹捧自己产品的优点或许是可行的，但却不能采用产品比较的策略，尽管这种方法在美国是司空见惯的。 . 某些地方的市民往往会比那些鲁莽行事的美国人要谦卑低调得多。 在很多文化里，公司都会比较注重长期发展和公司信誉。 
+	
+	\newpar If you are designing visual advertising, take into account local differences in non-verbal behavior such as gestures, eye contact, personal space, and male-female relationships. Years ago, a movie was released in China that showed the first on-screen kiss ever filmed in the PRC. When the couple's lips met, an audible gasp swept through the theater. Depending on a variety of factors, this higher shock value of a public kiss could work for or against your advertising.
+	
+	如果你正在策划视觉广告，那么你就有必要考虑非言语行为的地方差异，如手势、眼神交流、私人空间以及男女关系。 数年前，有一部电影在中国上映，这部电影里出现了中国电影史上第一次接吻的镜头。 当接吻镜头出现时，电影院里惊叹声一片。 考虑到丰富的文化因素，公众之吻的较高冲击值可能会对你的广告产生截然相反的功效。 
+	
+	\newpar It can be a big mistake to assume a pan-Asian market or a ``Latin American'' or ``European'' buyer. Neighboring cultures elsewhere don't necessarily share buying preferences any more than a US buyer does with a Mexican consumer. Furthermore, national borders don't always delineate buying behavior; regional patterns can be just as strong.
+	
+	妄加推断一个泛亚洲市场或一位拉丁美洲或欧洲客户都有可能会酿成大错。 在邻国文化里，并不见得一定会有共同的购买喜好;同样，美国消费者和墨西哥消费者的购物偏好也不尽相同。 而且，国界也不一定总能区分消费行为，因为地区特色也一样会很明显。  
+	
+	\newpar Each aspect of culture is like a stone thrown into a pool. Cuisine influences not just companies that trade in foodstuffs, but also appliances, cookware, storage ware, serve ware, packaging, as well as franchise food and hospitality companies. And don't use the Jolly Green Giant in part of Asia where a green hat worn by a man signifies that he has an unfaithful wife.
+	
+	文化的方方面面都可能会如投石入水，泛起涟漪。 饮食习惯不仅会影响食品公司，也会影响经营日用品、厨具、储藏器皿、餐具、包装公司，以及获得经营权的餐饮、服务店。 在有些亚洲地区不要用 ``快乐的绿巨人''，因为在当地文化里，男人戴绿帽子就表示他妻子对他不忠。  
+	
+	\newpar It's definitely best to have someone with native knowledge of the target culture advise you. Small budget? Consult bi-national chambers of commerce for effective help. But before launching a marketing campaign, try a test market first, usually in a major city with demographics representative of the targeted country or region. Generally, city populations may be more sophisticated and have the most cosmopolitan attitudes; they also have the highest incomes and therefore are more able to purchase consumer and discretionary goods.
+	
+	要是能够聘请到一位了解当地文化的人充当目标市场文化顾问，那肯定再好不过了。 预算不够，就去咨询跨境商会以获取有效的帮助。 但是，在启动一项营销活动之前，可以先到市场上测试一下，这种测试通常在目标国家或地区具有代表性的大城市进行。 一般来说，城市居民见多识广，他们的观念也兼容并包;同时，他们的收人往往是最高的，更具随意购买消费品的能力。  
+	
+	\newpar In one such pretest, a US luggage manufacture found out that culture also affects thinking and perception. The company designed a new West Asian advertising campaign around the image of its luggage being carried on a magic flying carpet.  A substantial part of the Arabic focus group thought they were seeing advertising for Samsonite carpets.
+	
+	在类似这样的一次测试里，一家美国行李箱制造商发现文化同样会影响思维和感知。 这家公司在中东地区策划了一则全新的广告—他们的行李箱乘坐在一块神奇的飞毯上。 阿拉伯地区绝大多数的重点访谈人群则认为他们看到的是一则 ``Samsonite'' 牌的地毯广告。 
+	
+	
+\end{document} 

@@ -1,0 +1,336 @@
+\documentclass[cs4size, a4paper,12pt]{article}
+\usepackage{geometry}
+\geometry{paperwidth=22.275cm,left=1.5cm,right=4cm,top=2cm,bottom=2cm}
+\usepackage{mathpazo}
+\usepackage{bm}
+\usepackage{tikz}
+\usepackage[space,UTF8,fontset = none]{ctex}
+\xeCJKsetup{
+	AutoFakeSlant = true
+}
+\xeCJKsetslantfactor{0.17}
+\linespread{1.667}
+% 字体设置
+\ctexset{fontset = none}
+% set up fonts
+\setCJKmainfont[BoldFont={Adobe Heiti Std}]{Adobe Song Std}
+\setCJKsansfont{Adobe Heiti Std}
+\setCJKmonofont{SimHei}
+ \setmainfont{Adobe Garamond Pro}
+\setsansfont{Arial}
+\setmonofont{Courier New}
+ \setCJKfamilyfont{jbr}{jingbairan.ttf}
+\newcommand{\jbr}{\CJKfamily{jbr}}      % 汉仪井柏然字体
+\definecolor{tcolor}{RGB}{255,127,  0} % default: 0,124,53
+\definecolor{lcolor}{RGB}{255,178,102} % default: 153,255,153
+\definecolor{pcolor}{RGB}{251,204,231} % default: 216,255,216
+
+\newcommand{\elegantpar}[2]{%
+  \textcolor{tcolor}{$\bm\langle{}\!{}$#1${}\!{}\bm\rangle$}%
+  \begin{tikzpicture}[remember picture, baseline=-0.75ex]%
+    \node[coordinate] (inText) {};%
+  \end{tikzpicture}%
+  \marginpar{%
+    \renewcommand{\baselinestretch}{1.0}%
+    \begin{tikzpicture}[remember picture]%
+      \draw node[fill= pcolor, rounded corners,text width=\marginparwidth] (inNote){\zihao{-4}#2};%
+  \end{tikzpicture}%
+  }%
+  \begin{tikzpicture}[remember picture, overlay]%
+    \draw[draw = lcolor, thick]
+      ([yshift=-0.55em] inText)
+        -| ([xshift=-0.55em] inNote.west)
+        -| (inNote.west);%
+  \end{tikzpicture}%
+}
+
+\setlength{\marginparwidth}{2.8cm}
+\usepackage{titlesec}
+\usepackage{chngcntr}
+\usepackage{lipsum} % for dummy text
+\titleclass{\numpar}{straight}[\section]
+\newcounter{numpar}
+\renewcommand{\thenumpar}{\arabic{numpar}}
+\counterwithout{numpar}{section} % from the chngcntr package
+\titleformat{name=\numpar,page=odd}[leftmargin] {\normalfont
+	\bfseries\filright}
+{\textcolor{tcolor}{\thenumpar}}{.5em}{}
+\titleformat{name=\numpar,page=even}[leftmargin] {\normalfont
+	\bfseries\filleft}
+{\thenumpar}{.5em}{}
+\titlespacing{\numpar}
+{1pc}{0ex plus .1ex minus .2ex}{1pc}
+\newcommand*{\newpar}{\numpar{}}
+
+\title{研究生英语综合教程(上)部分原文及翻译}
+\author{\jbr\huge Tsingber Lee}
+\begin{document}
+\maketitle
+\zihao{-3}
+
+\section*{Unit 4\qquad{}Love and Marriage}
+\textit{The following text is extracted from Marriages and Families by Nijole V. Benokraitis.
+The book has been used as a textbook for sociology courses and women's studies in a number of universities in the United States. It highlights important contemporary changes in society and the family and explores the choices that are available to family members, as well as the constraints that many of us do not recognize. It examines the diversity of American families today, using cross-cultural and multicultural comparisons to encourage creative thinking about the many critical issues that confront the family of the twenty-first century.}
+
+\textit{下面的文章选自奈杰尔贝诺克瑞提斯的婚姻与家庭。此书在美国的一些大学里被用作社会学和妇女研究等课程的教材，它强调了在当代社会和家庭中所发生的重要变化，探索了家庭成员所面临的选择，以及我们很多人都还未意识到的种种约束。该书还审视了当今美国家庭的多样性，运用跨文化和多元文化的比较，以激发创造性思维来研究21世纪家庭所面临的许多严峻问题。}
+
+\begin{center}
+\textcolor{tcolor}{\bf LOVE AND LOVING RELATIONSHIPS}
+
+\hfill\textit{Nijole V. Benokraitis}
+
+\textcolor{tcolor}{\bf 爱和情感连系}
+
+\hfill\textit{奈杰尔·贝诺克瑞提斯}
+\end{center}\setcounter{numpar}{0}
+
+\newpar Love--as both an emotion and a behavior--is essential for human survival--The family is usually our earliest and most important source of love and emotional support. Babies and children deprived of love have been known to develop a wide variety of problems--for example, depression, headaches, \elegantpar{physiological impairments}{身体机能变坏}, and neurotic and psychosomatic difficulties--that sometimes last a lifetime. In contrast, infants who are loved and cuddled typically gain more weight, cry less, and smile more. By five years of age, they have been found to have significantly higher IQs and to score higher on language tests.
+
+爱，对于人类的生存是不可或缺的。它既是一种情感，又是一种行为。家庭通常是我们最早和最重要的爱和情感支持的来源。众所周知，缺乏爱的婴幼儿会产生各种各样的问题，如抑郁症、头痛、生理残疾、神经质或身心疾病，这些病有时会伴随他们一生。而对比之下，拥有爱和拥抱的婴儿通常体重增加得快，哭得少，而笑得多。到了五岁时，他们的智商和语言测试的分数明显比前一类儿童高得多。
+
+\newpar Much research shows that the quality of care infants receive affects how they later get along with friends, how well they do in school, how they react to new and possibly stressful situations, and how they form and maintain loving relationships as adults. It is for these reasons that people's early intimate relationships within their family of origin1 are so critical. Children who are raised in impersonal environments (orphanage, some foster homes, or unloving families) show emotional and social underdevelopment, language and motor skills retardation, and mental health problems.
+
+很多研究发现婴儿获得关爱的质量会影响到他们以后的交友，在学校的表现，如何应对陌生的或可能充满压力的情况，以及他们成年后如何建立并且维系情感连系。正是因为这些原因，人们与家庭成员的早期亲密关系才如此至关重要。在人情冷漠的环境中(如孤儿院，某些寄养家庭，或缺乏关爱的家庭)长大的孩子会出现情感和社会性发育不良，语言和运动技能迟缓，以及精神健康问题。
+
+\newpar Love for oneself, or self-love, is also essential for our social and emotional development. Actress Mae West once said, ``I never loved another person the way I loved myself.''  Although such a statement may seem self-centered, it's actually quite insightful Social scientists describe self-love as an important oasis for self- esteem. Among other things, people who like themselves are more open to criticism and less demanding of others. Fromm (1956) saw self-love as a necessary prerequisite for loving others. People who don't like themselves may not be able to return love but may constancy seek love relationships to bolster their own poor self-images. But just what is love? What brings people together?
+
+对自己的爱，或者说自爱，对我们的社会性和情感发展也是至关重要的。女演员梅·韦斯特曾说过，``我从没有像爱自己那样爱过别人。'' 虽然这样的话听起来似乎有些以自我为中心，实际上却是相当有见地。社会学家将自爱描述为自尊的一个重要基础。从别的方面来说，自我喜欢的人更乐于接受批评，对别人的要求也不那么苛刻。弗罗姆(1956)认为自爱是爱别人的先决条件。不喜欢自己的人也许不懂得回报爱，而却有可能不停地寻找爱的关系来改变卑微的自我形象。那么到底什么是爱?是什么让人们走到一起?
+
+\newpar Love is an \elegantpar{elusive}{难以描述的} concept. We have all experienced love and feel we know what it is; however, when asked what love is, people give a variety of answers. According to a nine-year-old boy, for example, ``Love is like an avalanche where you have to run for your life.'' What we mean by love depends on whether we are talking about love for family members, friends, or lovers. Love has been a source of inspiration, wry witticisms, and even political action for many centuries.
+
+爱是一个难以描述的概念。我们都经历过爱，觉得我们知道爱是什么，然而当被问到什么是爱时，人们给出的答案却不尽相同，比如一个九岁的男孩说，``爱像雪崩，你必须快跑才能活命。'' 爱对我们来说意味着什么，这取决于我们所指的是家人之间、朋友之间还是恋人之间的爱。几百年来爱都是灵感、俏皮的揶揄、甚至是政治活动的来源。
+
+\newpar Love has many dimensions. It can be romantic, exciting, obsessive, and irrational- It can also be platonic, calming, altruistic, and sensible? Many researchers feel that love defies a single definition because it varies in degree and intensity and across social contexts. At the very least, three elements are necessary for a loving
+relationship: (1) a willingness to please and accommodate the other person, even if this involves compromise and sacrifice; (2) an acceptance of the other person's faults and shortcomings; and (3) as much concern about the loved one's welfare as one's own. And, people who say they are ``in love'' emphasize caring, intimacy, and commitment.
+
+爱有很多层面，它可能是浪漫的，令人激动的，让人着迷的，或者是非理性的。它也可能是柏拉图式的，令人平静的，无私的，或者理智的。许多研究者觉得爱没有一个唯一的定义，它有程度和强度之分，并且跨越了社会背景。拥有恋爱关系至少需要具备三个元素：1) 愿意取悦和迁就另一方，即使需要妥协或牺牲；2) 能接受另一方的错误和缺点；3) 关心爱人的幸福像关心自己一样。而且，说自己“处于恋爱中”的人们重视相互之间的关心、亲密和忠诚。
+
+\newpar In any type of love, caring about the other person is essential. Although love may,
+involve passionate yearning, respect is a more important quality. Respect is inherent in
+all love: ``I want the loved person to grow and unfold for his own sake, and in his own
+ways, and not for the purpose of serving me.''  If respect and caring are missing, the
+relationship is not based on love. Instead, it is an unhealthy or possessive dependency
+that limits the lovers' social, emotional, and intellectual growth.
+
+不管是哪种类型的爱，关心另一方是非常必要的。虽然爱可能包含激情的渴望，然而相互尊重才是更重要的品质。相互尊重是所有爱的共性：``我想要我爱的人为他自己成长发展，并且用他自己的方式，而不是为了迎合我。'' 如果没有尊重和关怀，两人的关系就不是建立在爱的基础上；反而成为一种不健康的或者是具有占有欲的依赖，而这会限制爱的双方在社会、情感和智力方面的发展。
+
+\newpar Love, especially long-term love, has nothing in common with the images of love or .frenzied sex that we get from Hollywood, television, and romance novels. Because of these images, many people believe a variety of myths about love. These misconceptions often lead to unrealistic expectations, stereotypes, and disillusionment. In fact, ``real'' love is closer to what one author called ``stirring-the-oatmeal love'' (Johnson 1985). This type of love is neither exciting nor thrilling but is relatively mundane and unromantic. It means paying bills, putting out the garbage, scrubbing toilet bowls, being up all night with a sick baby, and performing myriad other ' oatmeal" tasks that are not very sexy.
+
+爱，特别是长久的爱，和我们从好莱坞、电视、或爱情小说中获得的对爱和狂热的性爱的印象完全不同。由于这些印象的缘故，许多人对爱有各种各样的误解，这些误解常常会导致不现实的期望、固定模式或幻觉破灭。事实上，``真'' 爱更接近于一位作家(约翰逊，1995)所称的 ``搅燕麦粥之爱''。这种爱既不令人激动也不能令人兴奋，但是它却是实实在在的，不浪漫的。它是付账单，倒垃圾，刷马桶，孩子生病时守夜，以及完成其他各种各样不那么性感的 ``搅燕麦粥'' 的任务。
+
+\newpar  Some partners take turns stirring the oatmeal. Other people seek relationships that offer candlelit gourmet meals in a romantic setting. Whether we decide to enter a serious relationship or not, what type of love brings people together?
+
+有些伴侣们轮流来 ``搅燕麦粥''，其他人则寻求一种能带来浪漫的烛光美餐的恋爱关系。不管我们是否决定建立认真的恋爱关系，是什么样的爱让我们走到一起?
+
+ \newpar What attracts individuals to each other in the first place? Many people believe that ``there's one person out there that one is meant for'' and that destiny will bring them together. Such beliefs are romantic but unrealistic. Empirical studies show that cultural norms and values, not fate, bring people together We will never meet millions of potential lovers because they are ``filtered out'' by formal or informal rules on partner
+eligibility due ton factors such as age, race, distance, Social class, religion, sexual
+orientation, health, or physical appearance.
+
+一开始让人相互吸引的是什么? 许多人相信 ``世上有一个人是你为之而生的''，而且命运会将你俩带到一起。这样的想法很浪漫却不现实。实证研究发现，是文化标准和价值观而非命运，将人们连系在一起。我们错过了成千上万的可能的爱人，因为他们早就被正式的或非正式的挑选理想爱人的准则筛选出局，这些准则包括年龄、种族、地域、社会阶层、宗教、性倾向、健康状况或外表。
+
+ \newpar Beginning in childhood, parents encourage or limit future romantic liaisons by selecting certain neighborhoods and schools. In early adolescence, pear norms influence the adolescent's decisions about acceptable romantic involvements (``You want to date who?!''). Even during the preteen years, romantic experiences are cultured in the sense that societal and group practices and expectations shape romantic experience. Although romance may cross cultural or ethnic borders, criticism and approval teach us what is acceptable romantic behavior and with whom. One might ``lust'' for someone, but these yearnings will not lead most of us to ``fall in love'' if there are strong cultural or group bans.
+
+从童年开始，父母们就通过选择某个街区和学校，或是鼓励或是限制孩子未来的情感关系。在青少年早期，同伴们的标准也会影响青少年决定哪些情感关系是可以接受的(“你想和谁约会?”)。甚至在13岁之前，情感经历就由社会和群体的活动和期望所决定和培养起来了。虽然爱情可以跨越文化和民族的界线，但批评和赞同教会了我们什么是可以接受的浪漫行为和与谁发生浪漫行为。一个人也许会对另一个人产生“欲望”，但是如果有强烈的文化或族群反对，我们中的大多数人即使有这样的渴望也不会因此而爱上某人的。
+
+ \newpar Regan and Berscheid (1999) differentiate between lust, desire, and romantic love.
+They describe lust as primarily physical rather than emotional, a condition that may
+be conscious or unconscious. Desire, in contrast, is a psychological in which one
+wants a relationship that one doesn't now have, or to engage in an activity in which
+one is not presently engaged. Desire may or may not lead to romantic love (which
+the authors equate with passionate or erotic low). Regan and Berscheid suggest that
+desire is an essential ingredient for initiating and maintaining romantic love. If desire
+disappears, a person is no longer said to be in a state of romantic love. Once desire
+diminishes, disappointed lovers may wonder where the ``spark'' in their relationship has gone and may reminisce regretfully (and longingly) about "the good old days".
+
+里根和波谢德(1999)曾把贪欲、性欲和浪漫的爱加以区分。他们把贪欲描述为身体上的而非情感上的兴奋，是一种有意识的或无意识的状态。相反性欲是一种心理状态，在这种心理状态下，一个人想建立一种目前还不具有的恋爱关系，或者是想进行一种目前还没有进行的行为。性欲可能会成为或不会成为浪漫的爱情(作者把浪漫的爱情等同于充满激情或性欲的爱)。里根和波谢德认为：性欲是点燃并维持浪漫爱情的必要成分。一旦性爱消失了，一个人就不能再说成是还处在浪漫恋情中。一旦欲望消失了，失望的恋人就会诧异原来他们关系中的 ``火花'' 去哪儿了，他们可能会很遗憾地(而且渴望地)怀念 ``过去的美好时光''。
+
+\newpar  One should not conclude, however, that desire always culminates in physical intimacy
+or that desire is the same as romantic love. Married partners may love each other even though they rarely, or never, engage in physical intimacy. In addition, there are some notable differences between love---especially long-term love---and romantic love. Healthy loving relationships, whether physical or not (such as love for family members), reflect a balance of caring, intimacy, and commitment.
+
+然而，我们不应就此得出性欲总是以身体的亲密接触告终，或性与浪漫爱情是同一回事的结论。结了婚的伴侣们可以深爱对方，即使很少或从来没有身体的亲密接触。此外，爱，尤其是长期的爱，和浪漫的爱是有很大区别的。健康的恋爱关系，不管它们是有性的或是无性的(比如对家人的爱)都反映了关怀、亲密和忠诚的平衡。
+
+\section*{Unit 5\qquad{}Living a Healthier Life}
+\setcounter{numpar}{0}
+\textit{The term yoga comes from a Sanskrit word which means yoke or union. Traditionally,
+yoga is a method joining the individual self with the Divine, Universal Spirit, or Cosmic
+Consciousness. Physical and mental exercises are designed to help achieve this goal, also called self-transcendence or enlightenment. On the physical  level yoga postures, called asanas, are designed to tone, strengthen, ana align me body. These postures are performed to make the spine supple and healthy and to promote blood flow to all the organs, glands, and tissues, keeping all the bodily systems healthy. On the mental level, yoga uses breathing techniques (pranayama) and meditation (dydna) to quiet, clarify, and discipline the mind. However, experts are quick to point out that yoga is not a religion, but away of living with health and peace of mind as its aims.}
+
+\textit{``瑜伽'' 这个词源于梵语，意思是 ``结合'' 或 ``联合'' ，传统上瑜伽是一种把个人和神，万物之灵或无穷的意识联合在一起的方法。为了帮助达到这个也被称为 ``自我超越'' 或 ``启蒙'' 的目的，设计了身体上和精神上的锻炼方法。在身体上，设计了各种瑜伽姿势来使人的身体结实、强壮，有协调性，练习这些体位能使脊柱变得柔软健康，血液更通畅地到达各器官、腺或人体组织，从而使身体各系统更健康穹在精神上，瑜伽使用呼吸法和冥想使心境平和、澄净，精神得到很好的修养。但是专家们很快指出瑜伽不是一种宗教，而是将健康与平和的心境结合在一起的一种生活方式。}
+
+\begin{center}
+	\textcolor{tcolor}{\bf YOGA IN AMERICA}
+	
+	\hfill{\textit{Douglas Dupler}}
+	
+	\textcolor{tcolor}{\bf 瑜伽在美国}
+	
+	\hfill{\textit{道格拉斯·多普勒}}
+\end{center}
+
+\newpar Yoga originated in ancient India and is one of the longest surviving philosophical systems in the world. Some scholars have estimated that yoga is as old as 5,000 years; artifacts detailing yoga postures have been found in India from over 3,000 B.C. Yogis claim that it is a highly developed science of healthy living that has been tested and perfected for all these years. Yoga was first brought to America in the late 1800s when Swami Vivekananda. an Indian teacher and yogi, presented a lecture on .meditation in Chicago. Yoga slowly began gaining followers, and flourished during the 1960s when there was a surge of interest in Eastern philosophy. There has since been a vast exchange of yoga knowledge in America, with many students going to India to study and many Indian experts coming here to teach, resulting in the establishment of a wide variety of schools.
+
+瑜伽起源于古印度，是世界上最古老的哲学体系之一。一些学者估计，瑜伽至少有5,000年的历史；印度曾出土过3,000年前的表现瑜伽姿势的手工艺品。瑜伽师们认为，经过几千年的考验和完善，瑜伽已经发展成为一门养生的成熟科学。19世纪晚期，印度学者、瑜伽师斯瓦米·维韦卡南达在芝加哥做了一场关于冥想的演讲，从此瑜伽传人了美国。慢慢地有人开始练习瑜伽，并在20世纪60年代东方哲学热盛行的时候形成了学习瑜伽的高潮。从此，瑜伽知识在美国传播开来，许多学徒专程前往印度学习，很多印度瑜伽师也来到美国教学，创办了大量瑜伽学校。
+
+\newpar Today, yoga is thriving, and it has become easy to find teachers and practitioners throughout America. A recent Roper poll, commissioned by Yoga Journal, found that 11 million Americans do yoga at least occasionally" and six million perform it regularly.  Yoga stretches are used by physical therapists and professional sports teams, and the benefits of yoga are being touted by movie stars and Fortune 500 executives. Many prestigious schools of medicine have studied and introduced yoga techniques as proven therapies for illness and stress. Some medical schools, like UCLA, even offer yoga classes as part of their physician training program.
+
+今天的美国，瑜伽已十分盛行，瑜伽教练和练习者随处可见。最近一项由《瑜伽月刊》委托洛普民调机构所做的调查显示，有1,100万的美国人至少会偶尔做一次瑜伽，另有600万的美国人会经常做瑜伽。瑜伽已被广泛应用于身体治疗和专业运动队的日常训练，做瑜伽的好处也被电影明星和《财富》杂志世界500强企业的总裁们争相吹捧。许多医学名校已经研究并提出能够有效缓解疾病和压力的瑜伽术了。包括加州大学洛杉矶分校在内的一些医学院甚至还为内科医学专业的学生开设了瑜伽课程。
+
+\newpar There are several different schools of hatha yoga in America; the two most prevalent ones are Iyengar and Ashtanga yoga8. Iyengar yoga was founded by B.K.S. Iyengar, who is widely considered as one of the great living innovators of yoga. Iyengar yoga puts strict emphasis on form and alignment, and uses traditional hatha yoga techniques in new manners and sequences. Iyengar yoga can be good for physical therapy because it allows the use of props like straps and blocks to make it easier for some people to get into the yoga postures. Ashtanga yoga can be a more vigorous routine, using a flowing and dance-like sequence of hatha postures to generate body heat, which purifies the body through sweating and deep breathing.
+
+美国有许多不同的哈他(传统)瑜伽学派，其中影响最大的是艾扬格派和阿斯汤加派。艾扬格瑜伽的创立者是波·可·斯·艾扬格，他是世界上目前仍健在的最伟大的瑜伽改革者之一。艾扬格瑜伽十分注重姿势的精准，它采用新的方式和顺序练习传统瑜伽。艾扬格瑜伽有助于身体治疗，因为它允许练习者使用瑜伽伸展带、瑜伽砖等辅助器材来减少做瑜伽动作的难度。阿斯汤加瑜伽有着更精准的要求，练习者要用舞蹈般流畅的动作来练习传统瑜伽，从而使身体发热，并通过出汗和深呼吸来净化自己的身体。
+
+\newpar Yoga routines can take anywhere from 20 minutes to two or more hours, with one hour being a good time investment to perform a sequence of postures and a meditation. Some yoga routines, depending on the teacher and school, can be as strenuous as the most difficult workout, and some routines merely stretch and align the body while the breath and heart rate are kept slow and steady. Yoga achieves its best results when it is practiced as a daily discipline, and yoga can be a life-long exercise routine, offering deeper and more challenging positions as a practitioner becomes more adept. The basic positions can increase a person's strength, flexibility and sense of well being almost immediately.  but it can take years to perfect and deepen them, which is an appealing and stimulating aspect of yoga for many.
+
+做瑜伽没有场地的限制，一套瑜伽动作通常需要20分钟到两个小时或者更多的时间，而一个小时左右的时间则是一系列动作和冥想的最佳选择。根据瑜伽师和学派的不同，一些瑜伽动作做起来辛苦异常，而另一些却只是在呼吸和心跳平稳的情况下调整和伸展肢体。每天练习瑜伽会达到最好的效果，随着动作越来越熟练，你就可以加大强度和难度，这样瑜伽就能成为你相伴终生的日常锻炼方式了。练习基础的瑜伽动作即可收到增强力量，改善柔韧性并使人感到舒适的效果，但要想达到完美和高深的境界还是需要日积月累的练习，这也是瑜伽吸引人的地方之一。
+
+\newpar Yoga is usually best learned from a yoga teacher or physical therapist, but yoga is simple enough that one can learn the basics from good books on the subject, which are plentiful. Yoga classes are generally inexpensive, averaging around 10 dollars per class, and students can learn basic postures in just a few classes. Many YMCAs, colleges, and community health organizations offer beginning yoga classes as well, often for nominal fees. If yoga is part of a physical therapy program,' it can be .reimbursed by insurance.
+
+能向瑜伽教练或身体治疗师学习瑜伽是最好不过了，但因为瑜伽入门并不难，所以也可以从大量的介绍瑜伽的正规书籍中自学它的基本动作。瑜伽课的学费一般不贵，平均一堂课10美元，学员们在几节课内就能学会基础的瑜伽动作。许多地方的基督教青年会、大学和社区健康协会都开办有瑜伽入门学习班，而且通常只象征性地收取一点儿费用。如果是作为身体治疗项目的一部分，瑜伽费用还能算在医疗保险的范围之内。
+
+\newpar Yoga can also provide the same benefits as any well-designed exercise program, increasing general health and stamina reducing stress. and improving those conditions brought about by sedentary lifestyles. Yoga has the added advantage of being a low- impact activity that uses only gravity as resistance, which makes it an excellent physical therapy routine: certain yoga postures can be safely used to strengthen and balance all
+parts of the body.
+
+瑜伽还能带来和精心设计的练习一样的效果，使人增强体质、焕发活力，并帮助人们舒缓压力和久坐带来的疲劳。瑜伽的另一个优点是，除了地心引力外，它不需承担额外的阻力，这使它成为身体治疗方法的不二之选；特定的瑜伽动作能安全有效地增强人的力量，提高身体的平衡度。
+
+\newpar Meditation has been much studied and approved for its benefits in reducing stress¬es- related conditions. The landmark book, The Relaxation Response, by Harvard cardiologist Herbert Benson, showed that meditation and breathing techniques for relaxation could have the opposite effect of stress, reducing blood pressure and other indicators, Since then, much research has reiterated the benefits of meditation for stress reduction and general health. Currently, the American Medical Association recommends meditation techniques as a first step before medication for borderline hypertension cases.
+
+研究表明，冥想能帮助人们缓解压力。哈佛心脏医学家赫伯特·班森在他划时代的著作《放松反应》里说道，冥想和呼吸技巧能使身体放松，达到与压力相反的效果，并使血压等一系列指标回落。从那以后，越来越多的研究都重申了冥想对减压和身体健康的积极影响。现在，美国医学协会已推荐把冥想疗法替代药物治疗用于治疗疑似高血压的第一步了。
+
+\newpar Modern psychological Studies have shown that even slight facial expressions can cause changes in the involuntary nervous system; yoga utilizes the mind/body connection, that is, yoga practice contains the central ideas that physical posture and alignment can influence a person's mood and self-esteem, and also that the mind can be used to shape and heal the body. Yoga practitioners claim that the strengthening of mind/body awareness can bring eventual improvements in all facets of a person's life.
+
+现代心理学研究表明，即使细微的表情变化也会引起神经系统的自主改变；而瑜伽正是身体和心灵的绝妙结合——瑜伽练习的中心思想就是，身体的姿态将影响人的心情和自我意识，而人的精神又能塑造和治愈人的身体。瑜伽练习者认为，精神／体质的加强最终将为生活的各方面都带来好处。
+
+\newpar Yoga can be performed by those of any age and condition, although not all poses should be attempted by everyone. Yoga is also a very accessible form of exercise; all that is needed is a flat floor surface large enough to stretch out on, a mat or towel, and enough overhead space to full raise the arms. It is a good activity for those who can't  go to gyms, who don' t like other forms of exercise, or have, very busy schedules. Yoga should be done on an empty stomach, and teachers recommend waiting three or more hours after meals. Loose and comfortable clothing should he worn.
+
+虽然有些姿势并不适合所有人练习，但是任何年龄段的人在任何条件下都能练习瑜伽。练瑜伽的准备工作也很简单；只需一块可以伸展肢体的平地、一块草垫或毛巾和一个足以抬起手臂的空间就可以展开练习了。对去不了体育馆、不喜欢其他体育运动和十分忙碌的人来说，瑜伽是一项再好不过的活动了。练习时应穿着宽松舒适的服装并保持空腹，瑜伽师推荐饭后三小时以上为宜。
+
+\newpar Beginners should exercise care and concentration when performing yoga postures, and not try to stretch too much too quickly, as injury could result. Some advanced yoga postures, like the headstand and full lotus position, can be difficult and require strength, flexibility, and gradual preparation, so beginners should get the help of a teacher before attempting them.
+
+初学者在练习时应集中注意力，小心动作不要做得太过太快，以免受伤。一些高阶的瑜伽动作，如头倒立式和全莲花坐式，需要有很好的力量、柔韧性和日积月累的练习作准备，因此初学者应在瑜伽师的指导下做这些动作。
+
+\newpar Yoga is not a competitive sport; it does not matter how a person does in comparison with others, but how aware and disciplined one becomes with one's own body and limitations. Proper form and alignment should always be maintained during a stretch or posture, and the stretch or posture should be stopped when there is pain, dizziness, or fatigue. The mental component of yoga is just as important as the physical postures. Concentration and awareness breath should not be neglected. Yoga should be done with an open, gentle, and non-critical mind: when one stretches into a position, it can be thought of as accepting and working on one's limits. Impatience, self-criticism and comparing oneself to others will not help in this process of self-knowledge. While performing the yoga of breathing (pranayama) and meditation (dyana), it is best to have an experienced teacher, as these powerful techniques can cause dizziness and discomfort when done improperly.
+
+瑜伽不是竞技体育；练瑜伽不需要和别人比，练瑜伽的目的是提高自己的觉悟和身心自律能力。做瑜伽必须保持姿势的正确，一旦感到疼痛、头晕或疲劳就必须停止。做瑜伽时，身体和精神一样重要，要注意集中精力去感受呼吸。练习时必须心胸开阔、平和；当你伸展肢体做每一个瑜伽动作时，你就是在接受挑战去达到自己的极限。不耐烦、自责和与他人相比都不利于这一过程中自我认识的实现。当练习呼吸法(调息)和冥想法(禅定)时，最好由经验丰富的瑜伽师来指导，因为一旦练习不当，这些技巧性很强的动作会使人感到头晕不适。
+
+\newpar Although yoga originated in a culture very different from modern America, it has been accepted and its practice has spread relatively quickly. Many yogis are amazed at how rapidly yoga's popularity has spread in America, considering the legend that it was passed down secretly by handfuls or adherents tor many centuries.
+
+虽然瑜伽的发源地与现代美国文化迥异，但它却得到了认同，并很快地传播开来。许多世纪以来，瑜伽只是在极少信徒的言传身教中得以流传，而今它在美国快速普及，这使许多瑜伽师感到很惊异。
+
+\newpar There can still be found some resistance to yoga, for active and busy Americans sometimes find it hard to believe that an exercise program that requires them to slow down, concentrate, and breathe deeply can be more effective than lifting weights or running, However, ongoing research in top medical schools is showing yoga's effectiveness for overall health and for specific problems, making it an increasingly acceptable health practice.
+
+也有一些人反对瑜伽，因为勤奋忙碌的美国人很难相信这项要他们放慢速度、集中精力进行深呼吸的运动会比举重或慢跑更有效。然而，越来越多的来自顶尖医学院的研究结果表明，瑜伽对全身健康和特殊病症都有好处，这也使越来越多的人接受这项健康的运动。
+
+\section*{Unit 7\qquad{}Exploring Human Nature}
+\setcounter{numpar}{0}
+\textit{As I know more of mankind I expect less of them, and am ready now to call a man a good man upon easier terms than I was formerly.}
+
+\hfill\textcolor{tcolor}{---\textit{Dr. Samuel Johnson}}
+
+\textit{我对人类的了解越多，对他们的期望就越低。和以前相比，我现在常常以较宽松的标准把一个人叫做好人。
+——塞缪尔·约翰逊博士}
+\begin{center}
+\textcolor{tcolor}{\bf ON HUMAN NATURE}
+
+\hfill\textit{Frank and Lydia Hammer}
+
+\textcolor{tcolor}{\bf 论人性}
+
+\hfill\textit{弗兰克，莉迪亚·汉默尔}
+\end{center}
+\newpar Human nature is the basis of character, the temperament and disposition; it is that indestructible matrix upon which the character is built, and whose shape it must take and keep throughout life. This we call a person's nature.
+
+人性是性格、气质和性情的基础，性格正是基于这种牢不可破的基质之上的，它必须以这种基质的形式存在，并将它保留终生，这种基质，我们称之为一个人的本性。
+
+\newpar The basic nature of human beings does not and cannot change. It is only the surface that is capable of alteration, improvement and refinement; we can alter only people's customs, manners, dress and habits. A study of history reveals that the people who walked this
+earth in antiquity were moved by the same fundamental forces, were swayed by the same passions, and had the same aspirations as the men and women of today. The pursuit of happiness still engrosses mankind the world over.
+
+人类的本性不会也不能改变，只有一些表面特征才会变化、改善和进一步提升；我们可以改变人们的风格、举止、衣着和习惯。一项历史研究表明，曾经行走在地球上的古人们和今天的男男女女们受着同样的基本力量驱使，被同样的激情左右并有着同样的抱负，时至今日，对幸福的追求仍然是全世界人类全身心投入的事业。
+
+\newpar  Moreover no one wishes his nature to change. One may covet the position of President or King, but would not change places with them unless, it meant the continuance of his own identify. Each man sees himself as unique, and so far as he is concerned the hub of the universe, different from any other individual. Apologies are in order when Mr. Smith is mistaken for Mr. Jones.
+
+此外，没有人希望改变自己的本性，有人可能会觊觎总统或国王的职位，但不会和他们交换位置，除非那意味着他自己身份的继续。每个人都把自己看成是独特个体，而且，就他而言，他就是宇宙的中心，有别于其他任何人。如果有人把史密斯先生误认作琼斯先生，这人就该道歉。
+
+\newpar Every man unfolds a distinct character over which circumstances and education have only the most limited control. No two people will ever draw the same conclusions from the same experiences, but each must interpret events and fit them into the mosaic of his own life's pattern. Human nature is ever true itself, not to systems of faith or education. Each holds to the structure of the mold into which the soul was cast at the time of its individualization. The qualities born in one remain as potentials whether they have a chance to develop or not. Under pressure, or change of interest, they can partially or wholly disappear from view, tor considerable periods of time; but nothing can permanently modify them, nothing can obliterate them.
+
+每个人都表现出一种与众不同的性格，而环境和教育对性格的影响都极其有限。两个人从相同的经历中也不会得出相同的结论，但是两个人会各自分析这些事件并将它们融合到自己丰富的生活模式中去。人性总是忠于它本身，而不受信仰或教育体制左右。一个人的个性和他独特的天性在出生时就已经形成了，而且不会改变。一个人与生俱来的品质，无论是否有机会发展，都保持为潜力。在遭受压力或兴趣变化的情况下，他们会部分或全部地消失相当一段时间，但是没有什么能永久地改变他们，也没有什么能把他们抹去。
+
+\newpar The constancy of human nature is proverbial, as no one believes that a man can fundamentally change his nature. This is why it is so difficult for one who has acquired
+an unsavory reputation to re-establish himself in public confidence. People know from
+experience that an individual who in one year displays knavish characteristics- seldom
+in the next becomes any different. Nor does a thief become a trustworthy employee, or a miser a philanthropist. Nor does a man change and become a liar, coward or traitor at fifty or sixty; if he is one then, he has been one ever since his character was formed. Big criminals are first little criminals, just as giant oaks are first little acorns.
+
+人性的恒定性是众所周知的，因为没有人相信一个人能够从根本上改变他的本性。这就是为什么一个恶名远扬的人很难重建公众对他的信心。人们凭经验知道某一年中表现出无赖性格的人不太可能在第二年有任何改观。小偷也不会变成值得信赖的员工。吝啬鬼也不可能变成慈善家。而且，一个人不会在五六十岁的时候变成谎话精、懦夫或叛徒，如果那时候他是，那么早在他性格形成的时候他就已经是了。大罪犯最初都是小罪犯，正如大橡树最初都是小橡果。
+
+\newpar Although man is potentially perfect he is far from being actually so. If he were actually perfect there would be nothing for preachers and humanitarians to do; no use for churches, schools, courts and prisons. Therefore while it is impossible to change human nature, it can be studied, controlled and directed, and this should be the supreme function of our religious, educational and social institutions.
+
+尽管人类有完美的潜质，但事实上他远远没有达到完美。如果事实上他已经是完美的，那么那些神父、教师和人道主义者便会无事可做；那些教堂、学校、法庭和监狱便会无所用处。因此虽然人性是不可能改变的，但是人们可以研究它、控制它和引导它。而且这应该是我们的宗教机构、教育机构和社会机构的最高职能。
+
+\newpar Man is perfect as a seed is perfect, germinally. The spirit is perfect, but when it inhabits human structures, it participates in the imperfections of the later; and during its association with matter takes on the mortal weakness, desires and limitations. But the spirit, the inner man, remains untouched and undefiled by evil. Only the outer man- the personality and the physical body- becomes imperfect, due to ignorance, wrong thinking and violation of the law of being. The outer man, too, was originally perfect, but man has so desecrated and abused it that today it is a far cry from the original model.
+
+人类在胚胎期是完美的，就好比一粒种子，在幼芽期是完美的一样。精神是完美的，但它栖居到人类肉体结构中后，便参与其中，表现出后者的不完美。在它与物质的联系过程中呈现出凡人的弱点、欲望和局限。但是精神，也就是人的内在，却仍能免遭邪恶的染指和玷污。只有外在的人——个性和躯体，由于无知、思想错误和违反自然规律而变得不完美。外在的人，原本也是完美的，但是由于人类如此的亵渎和滥用，今天，它已经与原型相去甚远。
+
+\newpar Man's majesty and nobility are taken for granted, although his faults and weaknesses are constantly paraded before our eyes. Only when behavior deviates from the normal does it attract attention. The good neighbor, the conscientious citizen, the kind father and faithful husband pass unnoticed. But the murderer, robber or wife beater is singled out for ublicity, because such conduct is unusual.
+
+人们想当然地认为人类是伟大和高尚的，尽管他的过错和弱点不断地暴露在我们面前。只有当人类行为偏离常规时才会引起人们的注意。人们对好邻居、良民、慈父和贞夫视而不见，但杀人犯、抢劫犯或殴打妻子的人却成为公众瞩目的焦点。因为这些行为非同寻常。
+
+\newpar Man's inherent goodness, moreover, is revealed by his countless acts of heroism, unselfishness and sacrifice. Daily one reads of men saving others at the peril of their
+own lives. One plunges into the surf and rescues a swimmer from drowning; another
+dashes into a burning house and carries a stranger to safety; others snatch a child from
+the wheels of death; many give their blood so that others may live. Countless unnamed and unrecorded men have given their lives for their fellowmen, not only on the battlefront but on the home- front as well.
+
+人类固有的优点还体现在不计其数的英雄主义行为、充满无私和牺牲精神的举动上，每天我们都会读到人们冒着生命危险挽救他人生命的事迹：有人跃入水中拯救溺水的泳者；有人冲进火场将陌生人带出险境；有人从死亡的车轮下救出孩子；许多人献出鲜血使他人生命得以延续。数不胜数的不知姓名、不被记载的人们，不仅在战场上，而且还在战争的大后方，为了他们的同胞献出了生命。
+
+\newpar Human nature does not and cannot change but unfolds its inherent pattern. Man has a nature and its laws can be known. We can only endeavor to understand man as he is.
+
+人性不会也不能改变，它只展现它固有的模式。它有天性而且这种天性的规律是可知的。我们只能尽力去了解人类的真实面貌。
+
+\section*{Unit 8\qquad{}Smarter Transportation}
+\textit{It's almost a common sense that wearing a seat belt can keep passengers from being injured or being killed in a car accident. But recent research done by John Adams shows more complicated statistics. More car accidents are caused by the reckless drivers who wear seat belts.}
+
+\begin{center}
+\textcolor{tcolor}{\bf THE HIDDEN DANGER OF SEAT BELTS}
+\end{center}
+\hfill\textit{David Bjerklie}
+
+\textit{安全带可以避免乘客在车祸中受伤或死亡，这几乎是常识。但是，约翰．亚当斯最近所做的研究得出了更加复杂的统计数据。当司机系着安全带时，他们开车无所顾忌，更多车祸因此而发生。}\setcounter{numpar}{0}
+\begin{center}
+\textcolor{tcolor}{\bf 座椅安全带的隐患}
+\end{center}
+
+\hfill\textit{大卫·布杰克里}
+
+\newpar Seat belts still decrease our risk of dying in an accident, but the statistics are not all \elegantpar{black and white}{clear. 是非分明}. In fact, according to one researcher, seat belts may actually cause people to drive more \elegantpar{recklessly}{carelessly. 轻率地，莽撞的}.
+
+座椅安全带固然能降低我们在车祸中死亡的危险，但从统计数据看，情况并不是那么绝对。事实上，据一位研究者说，安全带可能会使人们在驾车时更加肆无忌惮。
+
+\newpar If there's one thing we know about our risky world, it's that seat belts save lives. And they do, of course. But reality, as usual, is messier and more complicated than that. John Adams, risk expert and emeritus professor of geography at University College London, was an early skeptic of the seat belt safety mantra. Adams first began to look at the numbers more than 25 years ago. What he found was that contrary to conventional wisdom, mandating the use of seat belts in 18 countries resulted in either no change or actually a net increase in road accident deaths.
+
+对于这个有危险的世界，如果有一件事我们还算了解，那就是座椅安全带可以救命。当然，它确实可以救命。但实际情况通常要更混乱、更复杂。伦敦大学学院的风险专家、地理学荣誉教授约翰·亚当斯早就质疑安全带能保证驾车安全的信条。亚当斯最早开始查看统计数字是早在25年前的事了。他的发现与人们的普遍看法恰恰相反——在18个强制使用安全带的国家，要么交通事故死亡率根本没有变化，要么实际上反而导致了死亡率的净增长。
+
+\newpar How can that be? Adams' interpretation of the data rests on the notion of risk compensation, the idea that individuals tend to adjust their behavior in response to what they perceive; as changes in the level of risk. Imagine, explains Adams, a driver negotiating a curve in the road. Let's make him a young male. He is going to be influenced by his perceptions of both the risks and rewards of driving a car. The considerations could include getting to work or meeting a mend for dinner on time, impressing a companion with his driving skills, bolstering his image of himself as an accomplished driver. They could also include his concern for his own safety and desire to live to a ripe old age, his feelings of responsibility for a toddler with him in a car seat, the cost of banging up his shiny new car or losing his license.
+
+怎么会这样?亚当斯用风险补偿的概念来解释这些数据资料，这个概念就是：人们往往会根据他们意识到的风险程度的改变来相应地调整自己的行为。亚当斯解释说，假设一位司机驾车途中要过一个窄弯道，这名司机是个男青年，那么他会受到自己对以下两方面认知的影响：驾车的风险和驾车的回报。他所考虑的东西可能包括：能够准时上班或准时赶赴朋友的饭局、让同伴对他的驾车技术留下深刻印象、使自己作为熟练驾车手的形象更加巩固。他还可能考虑到自身的安全问题、长命百岁的愿望、对车上年幼乘客的责任感、撞毁自己的漂亮新车或驾驶证被没收的代价。
+
+\newpar Nor will these possible concerns exist in a vacuum. He will be taking into account the weather and the condition of the road, the amount of traffic and the capabilities of the car he is driving. But crucially, says Adams, this driver will also be adjusting his behavior in response to what he perceives are changes in risks. If he is wearing a seat belt and his car has front and side air bags and anti-skid brakes to boot, he may in turn drive a bit more daringly.
+
+这些可能的担心也不是孤立存在的。他还要考虑到天气和路况、交通拥挤的程度和所驾车子的性能。但亚当斯说，关键的是这个司机还将根据他对风险变化的判断来调整自己的行为。如果他系上了安全带，而他的车子带有前、侧气囊和防滑刹车系统，他驾起车来可能会更大胆。
+
+\newpar The point, stresses Adams, is that drivers who feel safe may actually increase the risk that they pose to other drivers, bicyclists, pedestrians and their own passengers (while an average of 80\% of drivers buckle up, only 68\% of their rear-seat passengers do). And risk compensation is hardly confined to the act of driving a car. Think of a trapeze artist,  suggests Adams, or a rock climber or motorcyclist. Add some safety equipment to the equation- a net, rope or helmet respectively- and the person may try maneuvers that he or she would otherwise consider foolish. In the case of seat belts, instead of a simple, straightforward reduction in deaths, the end result is actually a more complicated redistribution of risk and fatalities. For the sake of argument, offers Adams, imagine how it might affect the behavior of drivers if a sharp stake were mounted in the middle of the steering wheel? Or if the bumper were packed with explosives. Perverse, yes, but it certainly provides a vivid example of how a perception of risk could modify behavior.
+
+亚当斯强调说，问题就在于自我感觉安全的司机们实际上对其他司机、骑自行车者、行人和自己车上的乘客来说是更大的危险(平均80％的司机系安全带，而同车后座的乘客只有68％系安全带)。风险补偿绝不仅限于驾车行为。亚当斯说，类似的还有表演高空秋千的艺人、攀岩者或摩托车手。如果在他们的安全等式上增添某种安全装置——比如说分别给他们一张救生网、一根保险绳或一个头盔——这个人可能就会试着做些平时认为很愚蠢的技巧性表演。因此，安全带并非简单、直截了当地减少死亡人数，而是对风险和死亡事故进行了更加复杂的再分配。为了说明其中的道理，亚当斯提出人们可以想象一下，如果在方向盘中间安一个尖头的木桩，司机开车时会受到怎样的影响?或者在保险杠上装满炸药呢?这简直是丧心病狂，是的，不过这确实提供了一个生动的例子，来说明人们如何根据对风险的判断来调整行为。
+
+\newpar In everyday life, risk is a moving target, not a set number as statistics might suggest.
+In addition to external factors, each individual has his or her own internal comfort level with risk- taking. Some are daring while others are cautious by nature. And still others are fatalists who may believe that a higher power devises mortality schedules that fix a predetermined time when our number is up. Consequently, any single measurement assigned to the risk of driving a car is bound to be only the roughest sort of benchmark.
+
+日常生活中，风险是不断移动的靶子，而并不像统计数据那样是个固定数字。除了外部因素外，每个人对于冒险都有自己内在的安全尺度。有些人天生大胆而有些人天生谨慎，还有些人是宿命论者，他们会认为，有一种更强大的力量设计了死亡时间表，预先确定了我们的死期。因此，对驾车风险做任何单一的测算所得到的肯定只是最粗略的基准数据。
+
+\newpar Adams cites, as an example the statistical fact that a young man is 100 times more likely to be involved in a severe crash than is a middle-aged woman. Similarly, someone driving at 3:00 a.m. Sunday is more than 100 times more likely to die than someone driving at 10:00 a.m. Sunday. Someone with a personality disorder is 10 times more likely to die. And let's say he's also drunk. Tally up All these factors and consider them independently says Adams, and you could arrive at. a statistical prediction that a disturbed, drunken young man driving in the middle of the night is 2.7 million times more likely to be involved in a serious accident than would a sober, middle-aged woman driving to church seven hours later.
+
+亚当斯引用了这样的统计事实作例子：青年男子发生严重撞车事故的概率比中年妇女高100倍。同样，在星期天凌晨3点钟驾车的人比同一天上午10点钟驾车的人死亡风险高出100多倍，有人格障碍的人比一般人死亡风险高10倍。亚当斯说，假如这个人还喝醉了，汇总所有这些因素并分别加以考虑，就会得到一个具有统计性的预测：一位心理失常又喝醉酒的青年男子在午夜驾车，7个小时后一位头脑清醒的中年妇女驾车去教堂，前者发生严重交通事故的概率比后者高270万倍。
+
+\newpar The bottom line is that risk doesn't exist in a vacuum and that there are a host of factors that come into play, including the rewards of risk, whether they are financial, physical or emotional. It is this very human context which risk exists. That is key, says Adams, who titled one of his recent blogs: What Kills You Matters- Not Numbers. Our reaction to risk very much depends on the degree to which it is voluntary (scuba diving), unavoidable (public transit) or imposed (air quality), the degree to which we feel we are in control (driving) or at the mercy of others (plane travel), and the degree to which the source of possible danger is benign ("doctor's orders), indifferent (nature) or malign, (murder and terrorism). We make dozens of risk calculations daily, but you can book odds- that most of them are so automatic or visceral- that we barely notice them.
+
+问题的要点就在于风险并不是孤立存在的，它会受到许多因素的影响，包括承担风险所带来的种种回报——无论是财产方面的、身体方面的，还是情感方面的。这正是风险赖以存在的真实的人类社会。亚当斯说，这才是问题的关键，正如他把近期的一篇博客题目定为《关键的是置人于死地的东西，而不是数字》。我们对风险的反应多半取决于它在多大程度上是自发的行为(如戴水肺潜水)、是不可避免的(如公共交通)、还是强加给我们的(如空气质量)；取决于我们认为在多大程度上是我们能控制的(如驾驶)或是由别人控制的(如乘飞机)；还取决于这种潜在危险在多大程度上是出于好意(如医生的指令)、无意的(如自然因素)或恶意的(如谋杀和恐怖活动)。我们每天要做几十遍风险计算，但是可以确信的是，多数时候人们对风险的计算自然而然或者说是出自本能，以至于我们几乎注意不到我们在做计算。
+
+
+\end{document} 
